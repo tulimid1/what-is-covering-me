@@ -1,5 +1,6 @@
 ---
 layout: page
+mathjax: true
 ---
 
 We set out to create a classifier that would perform very well (>90% accuracy) on the forest cover type data set from University of California Irvine Machine Learning Repository. 
@@ -10,6 +11,6 @@ In order to create a high performing model, we used ensemble learning. Ensemble 
 
 ![all_accuracy_bars]()
 
-We found that we had some moderate classifiers (i.e., Linear Discriminant Analysis, Quadratic Discriminant Analysis, and Logistic Regression) and some strong classifiers (i.e., $K Nearest Neighbors and Support Vector Machine). Interestingly, our ensemble model perfomed better than the moderate classifiers, but worse than the strong classifiers. 
+We found that we had some moderate classifiers (i.e., Linear Discriminant Analysis, Quadratic Discriminant Analysis, and Logistic Regression) and some strong classifiers (i.e., $K$ Nearest Neighbors and Support Vector Machine). Interestingly, our ensemble model perfomed better than the moderate classifiers, but worse than the strong classifiers. 
 
 Take a look at the rest of the website to find out more!
