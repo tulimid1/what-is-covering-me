@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Code
+title: Python
 permalink: /Code/
 ---
 
