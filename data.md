@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Covertype Data Set
+title: Data
 permalink: /Data/
 ---
 
