@@ -1,5 +1,4 @@
 ---
-title: "Description"
 layout: page
 ---
 
