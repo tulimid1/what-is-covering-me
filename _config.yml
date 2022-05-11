@@ -1,6 +1,6 @@
-title: "Task Name"
-author: "Duncan Tulimieri"
-description: "Duncan Tulimieri"
+title: "What's covering me?"
+author: "Duncan Tulimieri and Devin Austin"
+description: "Duncan Tulimieri and Devin Austin"
 
 permalink: /:title/
 lang: "en"
@@ -17,8 +17,9 @@ minimal: false             # use a dark header
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "m-doc.md"}
-  - {file: "py-doc.md"}
+  - {file: "code.md"}
+  - {file: "documents.md"}
+  - {file: "data.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Mail, icon: envelope, url: "mailto:tulimid@udel.edu"}
