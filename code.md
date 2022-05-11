@@ -4,8 +4,6 @@ title: Code
 permalink: /Code/
 ---
 
-# Code section 
-
 All of the code for this project can be found [here](https://github.com/tulimid1/what-is-covering-me/tree/main). 
 
 To recreate figures and analyses from paper, follow these steps:
