@@ -18,7 +18,7 @@ cd .../what-is-covering-me/Code
 conda env create -n CoverTypeProject -f CoverTypeProject.yml
 ```
 
-3. Update the data path to your device. Go to `Code` folder of downloaded repo and edit line 8 of [ProcessData.py]() to .../what-is-covering-me/Data
+3. Unzip and update the data path to your device. Go to `Code` folder of downloaded repo and edit line 8 of [ProcessData.py]() to .../what-is-covering-me/Data
 
 4. Using the `CoverTypeProject` environment, run the following notebooks to recreate the following figures from the paper/presentation:
 
