@@ -13,6 +13,6 @@ In order to create a high performing model, we used ensemble learning. Ensemble 
   <img src="all_models_scores_kbg.png" />
 </p>
 
-We found that we had some moderate classifiers (i.e., Linear Discriminant Analysis, Quadratic Discriminant Analysis, and Logistic Regression) and some strong classifiers (i.e., $K$ Nearest Neighbors and Support Vector Machine). Interestingly, our ensemble model perfomed better than the moderate classifiers, but worse than the strong classifiers. 
+We found that we had some moderate classifiers (i.e., Linear Discriminant Analysis, Quadratic Discriminant Analysis, and Logistic Regression) and some strong classifiers (i.e., $$K$$ Nearest Neighbors and Support Vector Machine). Interestingly, our ensemble model perfomed better than the moderate classifiers, but worse than the strong classifiers. 
 
 Take a look at the rest of the website to find out more!
