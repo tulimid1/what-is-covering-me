@@ -12,7 +12,9 @@ To recreate figures and analyses from paper, follow these steps:
 
 2. Create a new Pyhton environment using [`Anaconda`](https://www.anaconda.com/) in the terminal.
 
-`conda env create -n CoverTypeProject -f CoverTypeProject.yml`
+```
+conda env create -n CoverTypeProject -f CoverTypeProject.yml
+```
 
 3. Run X, Y, Z notebooks to replicate figures and analysis.  
 
