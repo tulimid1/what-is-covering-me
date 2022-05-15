@@ -1,4 +1,4 @@
-name: math637
+name: CoverTypeProject
 channels:
   - conda-forge
   - defaults
@@ -151,6 +151,8 @@ dependencies:
     - datetime==4.4
     - imageio==2.16.0
     - joblib==1.1.0
+    - pypng==0.0.21
+    - pyqrcode==1.2.1
     - pytz==2021.3
     - savingfigr==1.0.3
     - savingfigures==1.0.3
@@ -158,4 +160,4 @@ dependencies:
     - sklearn==0.0
     - threadpoolctl==3.1.0
     - zope-interface==5.4.0
-prefix: /Users/Semrau_Lab/opt/anaconda3/envs/math637
+prefix: /Users/duncan/opt/anaconda3/envs/CoverTypeProject
