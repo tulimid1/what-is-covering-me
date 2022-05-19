@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Documents
-permalink: /Documents/
+title: Paper
+permalink: /Paper/
 ---
 
 Table of Contents
