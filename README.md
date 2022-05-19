@@ -1,4 +1,4 @@
-# What's covering me? - Prediction of forest cover type based on cartographic variables 
+# [What's covering me? - Prediction of forest cover type based on cartographic variables](https://tulimid1.github.io/what-is-covering-me/)
 
 This repository holds the [code](#code), [data](#data), and [paper](#paper) from a class project completed by the two collaborators (Duncan Tulimieri and Devin Austin). 
 
