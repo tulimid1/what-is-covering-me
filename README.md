@@ -18,4 +18,4 @@ The data used for this project can from the [University of California Irvine Mac
 
 ## Paper
 
-The paper for this project can be found in the [documents folder]() as well as on the project's [website](). 
+The paper for this project can be found in the [documents folder]() as well as on the project's [website](https://tulimid1.github.io/what-is-covering-me/). 
