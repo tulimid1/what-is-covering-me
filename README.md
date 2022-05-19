@@ -6,7 +6,7 @@ This repository holds the [code](#code), [data](#data), and [paper](#paper) from
 
 ## Code 
 
-We used Python to perform all analyses. All code to recreate all analysis and figures can be found in the [code folder](). 
+We used Python to perform all analyses. All code to recreate all analysis and figures can be found in the [code folder](https://github.com/tulimid1/what-is-covering-me/tree/main/Code). 
 
 ---
 
