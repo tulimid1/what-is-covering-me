@@ -24,7 +24,7 @@ conda env create -n CoverTypeProject -f CoverTypeProject.yml
 
 5. Using the `CoverTypeProject` environment, run the following notebooks to recreate the following figures from the paper/presentation:
 
-* Figure 2 : [____.ipynb]()
+* Figure 2 : [Tree Pic Collage Generator.ipynb.ipynb](https://github.com/tulimid1/what-is-covering-me/blob/main/Code/Tree%20Pic%20Collage%20Generator.ipynb)
 * Figure 3 : [Blackard_Dean_99.ipynb](https://github.com/tulimid1/what-is-covering-me/blob/main/Code/Blackard_Dean_99.ipynb)
 * Figures 4-9 : [simulate2D_models.ipynb](https://github.com/tulimid1/what-is-covering-me/blob/main/Code/simulate2D_models.ipynb)
 * Figures 10, 12, 14, 16, 18, 19, 20 : [TheEnsemble.ipynb](https://github.com/tulimid1/what-is-covering-me/blob/main/Code/TheEnsemble.ipynb)
