@@ -2,6 +2,8 @@
 
 This repository holds the [code](#code), [data](#data), and [paper](#paper) from a class project completed by the two collaborators (Duncan Tulimieri and Devin Austin). 
 
+Author Contributions: Conceptualization: D.T. and D.A.; Methodology: D.T. and D.A.; Validation: D.T. and D.A.; Analysis: D.T. and D.A.; Writing: D.T. and D.A.
+
 ---
 
 ## Code 
