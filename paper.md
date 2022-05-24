@@ -93,16 +93,16 @@ reference="fig:forest_cover_types"}).
 
 Current methods for classifying forest cover types involve direct
 observations via field personnel or estimation using remotely sensed
-data `\cite{blackard1999comparative}`{=latex}. These approaches are
+data [2](#references). These approaches are
 often time-consuming and costly; however, the use of predictive models
-can streamline this process `\cite{blackard1999comparative}`{=latex}. We
+can streamline this process [2](#references). We
 decided to examine the accuracies of several machine learning algorithms
 and an ensemble learning method to predict forest cover types. Using
 these methods, our goal was to achieve the highest predictive power
 across all classes.
 
 ![Study area location map. Taken from Blackard and Dean (1999)
-`\cite{blackard1999comparative}`{=latex}.](figures/BD99_location_map.png){#fig:loc_map}
+[2](#references).](figures/BD99_location_map.png){#fig:loc_map}
 
 ![Forest cover types and predictors. The data set contains 581,012
 instances, 54 predictors, and 7 classes. Examples of the seven cover
@@ -113,10 +113,10 @@ A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
 
-### Blackard and Dean (1999) `\cite{blackard1999comparative}`{=latex}
+### Blackard and Dean (1999) [2](#references)
 
 Blackard and Dean were the first to publish on this data set
-`\cite{blackard1999comparative}`{=latex}. These authors compared the
+[2](#references). These authors compared the
 performance of a neural network, a linear discriminant analysis model,
 and a quadratic discriminant analysis model on multiple subsets of the
 data set. The authors split the data set into six subsets (Table
@@ -136,11 +136,11 @@ predictive power and wished to test these hypotheses.
                  54                  Ten quantitative variables + four wilderness areas + 40 soil types
 
   : Number of input variable subsets examined. Taken from Blackard and
-  Dean (1999) `\cite{blackard1999comparative}`{=latex}.
+  Dean (1999) [2](#references).
 :::
 
 To train the best neural network, the authors did multiple iterations of
-editing model parameters `\cite{blackard1999comparative}`{=latex}. The
+editing model parameters [2](#references). The
 neural network was initialized and kept to one input layer, one hidden
 layer, and one output layer. These layers were dense with no dropouts.
 The authors systematically changed the number of nodes in the hidden
@@ -163,7 +163,7 @@ reference="fig:BB99_comp_models"}).
 
 The authors also implemented both linear and quadratic discriminant
 analyses, which required less parameter tuning than neural networks, but
-at the cost of flexibility `\cite{blackard1999comparative}`{=latex}. The
+at the cost of flexibility [2](#references). The
 quadratic discriminant analysis model was able to make predictions on
 subsets that did not contain categorical features and became unstable
 upon their addition. Of the subsets of data tested, the linear
@@ -210,7 +210,7 @@ all the hyper parameters.
 classification results. *NN*: neural network, *LDA*: linear discriminant
 analysis; *QDA* quadratic discriminant analysis. Republished from
 Blackard and Dean (1999)
-`\cite{blackard1999comparative}`{=latex}.](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
+[2](#references).](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
 
 ### Oza and Russell (2001) `\cite{oza2001experimental}`{=latex}
 
@@ -838,7 +838,7 @@ Our ensemble classification performed poorly when compared to $K$NN with
 an accuracy of 75.35%; however, it did perform better than each of our
 moderate classifiers. It also performed better than all neural network
 used by Blackard and Dean, which achieved an accuracy of \~71%
-`\cite{blackard1999comparative}`{=latex}.
+[2](#references).
 
 # Replication
 
@@ -858,28 +858,42 @@ everything publicly available for others to learn.
 # References
 
 [1] ArborDayFoundation. “Ponderosa Pine [Photograph]”. In: ().
+
 [2] Jock A Blackard and Denis J Dean. “Comparative accuracies of artificial neural networks
 and discriminant analysis in predicting forest cover types from cartographic variables”. In:
 Computers and electronics in agriculture 24.3 (1999), pp. 131–151.
+
 [3] Stark Bro’s. “Quaking Aspen Tree [Photograph]”. In: ().
+
 [4] Rich Caruana, Nikos Karampatziakis, and Ainur Yessenalina. “An empirical evaluation of
 supervised learning in high dimensions”. In: Proceedings of the 25th international conference
 on Machine learning. 2008, pp. 96–103.
+
 [5] Bill Cook. “Douglas Fir Trees [Photograph]”. In: ().
+
 [6] Trevor Hastie et al. The elements of statistical learning: data mining, inference, and prediction.
 Vol. 2. Springer, 2009.
+
 [7] Iojjic. “Which way does the wind blow? [Photograph]”. In: (2007).
+
 [8] Nikunj C Oza and Stuart Russell. “Experimental comparisons of online and batch versions of
 bagging and boosting”. In: Proceedings of the seventh ACM SIGKDD international conference
 on Knowledge discovery and data mining. 2001, pp. 359–364.
+
 [9] F. Pedregosa et al. “Scikit-learn: Machine Learning in Python”. In: Journal of Machine
 Learning Research 12 (2011), pp. 2825–2830.
+
 [10] Omer Sagi and Lior Rokach. “Ensemble learning: A survey”. In: Wiley Interdisciplinary
 Reviews: Data Mining and Knowledge Discovery 8.4 (2018), e1249.
+
 [11] NAMR Senaviratna, TMJA Cooray, et al. “Diagnosing multicollinearity of logistic regression
 model”. In: Asian Journal of Probability and Statistics 5.2 (2019), pp. 1–9.
+
 [12] Saman Shojae Chaeikar et al. “PFW: polygonal fuzzy weighted—an SVM kernel for the
 classification of overlapping data groups”. In: Electronics 9.4 (2020), p. 615.
+
 [13] StateSymbolsUSA. “Cottonwood | State Symbols USA [Photograph]”. In: (2019).
+
 [14] Planting Tree. “Norway Spruce Tree [Photograph]”. In: ().
+
 [15] TreeTime. “LodgepolePine [Photograph]”. In: (2022).
