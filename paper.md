@@ -856,3 +856,30 @@ Jock A. Blackard, Denis J. Dean, and Charles W. Anderson for making
 everything publicly available for others to learn.
 
 # References
+
+[1] ArborDayFoundation. “Ponderosa Pine [Photograph]”. In: ().
+[2] Jock A Blackard and Denis J Dean. “Comparative accuracies of artificial neural networks
+and discriminant analysis in predicting forest cover types from cartographic variables”. In:
+Computers and electronics in agriculture 24.3 (1999), pp. 131–151.
+[3] Stark Bro’s. “Quaking Aspen Tree [Photograph]”. In: ().
+[4] Rich Caruana, Nikos Karampatziakis, and Ainur Yessenalina. “An empirical evaluation of
+supervised learning in high dimensions”. In: Proceedings of the 25th international conference
+on Machine learning. 2008, pp. 96–103.
+[5] Bill Cook. “Douglas Fir Trees [Photograph]”. In: ().
+[6] Trevor Hastie et al. The elements of statistical learning: data mining, inference, and prediction.
+Vol. 2. Springer, 2009.
+[7] Iojjic. “Which way does the wind blow? [Photograph]”. In: (2007).
+[8] Nikunj C Oza and Stuart Russell. “Experimental comparisons of online and batch versions of
+bagging and boosting”. In: Proceedings of the seventh ACM SIGKDD international conference
+on Knowledge discovery and data mining. 2001, pp. 359–364.
+[9] F. Pedregosa et al. “Scikit-learn: Machine Learning in Python”. In: Journal of Machine
+Learning Research 12 (2011), pp. 2825–2830.
+[10] Omer Sagi and Lior Rokach. “Ensemble learning: A survey”. In: Wiley Interdisciplinary
+Reviews: Data Mining and Knowledge Discovery 8.4 (2018), e1249.
+[11] NAMR Senaviratna, TMJA Cooray, et al. “Diagnosing multicollinearity of logistic regression
+model”. In: Asian Journal of Probability and Statistics 5.2 (2019), pp. 1–9.
+[12] Saman Shojae Chaeikar et al. “PFW: polygonal fuzzy weighted—an SVM kernel for the
+classification of overlapping data groups”. In: Electronics 9.4 (2020), p. 615.
+[13] StateSymbolsUSA. “Cottonwood | State Symbols USA [Photograph]”. In: (2019).
+[14] Planting Tree. “Norway Spruce Tree [Photograph]”. In: ().
+[15] TreeTime. “LodgepolePine [Photograph]”. In: (2022).
