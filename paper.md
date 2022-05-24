@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Paper
+mathjax: true
 permalink: /Paper/
 ---
 # What's covering me? - Prediction of forest cover type based on cartographic variables
