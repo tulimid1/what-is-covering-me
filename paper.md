@@ -75,7 +75,7 @@ The University of California Irvine's machine learning repository contains a lar
 Current methods for classifying forest cover types involve direct observations via field personnel or estimation using remotely sensed data \cite{blackard1999comparative}. These approaches are often time-consuming and costly; however, the use of predictive models can streamline this process \cite{blackard1999comparative}. We decided to examine the accuracies of several machine learning algorithms and an ensemble learning method to predict forest cover types. Using these methods, our goal was to achieve the highest predictive power across all classes.
 
 <p align="center">
-  <img src="all_models_scores_kbg.png" />
+  <img src="figures/all_models_scores_kbg.png" />
 </p>
 % blackard and dean - Location map 
 \begin{figure}[!h]
