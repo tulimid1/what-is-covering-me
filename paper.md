@@ -10,59 +10,113 @@ Devin Austin and Duncan Tulimieri
 
 Table of Contents
 
-1. [Introduction]()
+1. [Introduction](#introduction)
 
-    1. [Previous literature using forest cover type data set]()
+    1. [Previous literature using forest cover type data set](#previous-literature-using-forest-cover-type-data-set)
     
-      1. [Blackard and Dean (1999)]()
+      1. [Blackard and Dean (1999)](#blackard-and-dean-(1999))
       
-      2. [Oza and Russell (2001)]()
+      2. [Oza and Russell (2001)](#oza-and-russell-(2001))
       
-2. [Algorithms]()
+2. [Algorithms](#algorithms)
 
-    1. [$$K$$-Nearest Neighbors ($$K$$NN)]()
+    1. [$$K$$-Nearest Neighbors ($$K$$NN)](#$$k$$-nearest-neighbors-($$k$$nn))
   
-    2. [Support Vector Machine (SVM)]()
+    2. [Support Vector Machine (SVM)](#support-vector-machine-(svm))
   
-    3. [Linear Discriminant Analysis (LDA)]()
+    3. [Linear Discriminant Analysis (LDA)](#linear-discriminant-analysis-(lda))
   
-    4. [Quadratic Discriminant Analysis (QDA)]()
+    4. [Quadratic Discriminant Analysis (QDA)](#quadratic-discriminant-analysis-(qda))
   
-    5. [Logistic Regression]()
+    5. [Logistic Regression](#logistic-regression)
   
-    6. [Ensemble Learning]()
+    6. [Ensemble Learning](#ensemble-learning)
   
-3. [Results]()   
+3. [Results](#results)   
 
-    1. [$$K$$-Nearest Neighbors]()
+    1. [$$K$$-Nearest Neighbors](#$$k$$-nearest-neighbors)
   
-    2. [Support Vector Machine]()
+    2. [Support Vector Machine](#support-vector-machine)
   
-    3. [Linear Discriminant Analysis]()
+    3. [Linear Discriminant Analysis](#linear-discriminant-analysis)
   
-    4. [Quadratic Discriminant Analysis]()
+    4. [Quadratic Discriminant Analysis](#quadratic-discriminant-analysis)
   
-    5. [Logistic Regression]()
+    5. [Logistic Regression](#logistic-regression)
   
-    6. [Ensemble]()
+    6. [Ensemble](#ensemble)
   
-4. [Discussion]()
+4. [Discussion](#discussion)
 
-    1. [Moderate performers]()
+    1. [Moderate performers](#moderate-performers)
   
-    2. [Strong performer]()
+    2. [Strong performer](#strong-performers)
   
-    3. [What happened with the ensemble model?]()
+    3. [What happened with the ensemble model?](#what-happened-with-the-ensemble-model-?)
   
-    4. [Future directions]()
+    4. [Future directions](#future-directions)
   
-5. [Conclusion]()
+5. [Conclusion](#conclusion)
 
-6. [Replication]()
+6. [Replication](#replication)
 
-7. [Acknowledgements]()
+7. [Acknowledgements](#acknowledgements)
 
-8. [References]()
+8. [References](#references)
 
 
 ---
+
+# Introductio
+
+## Previous literature using forest cover type data set
+    
+### Blackard and Dean (1999)
+      
+### Oza and Russell (2001)
+      
+# Algorithms
+
+## $$K$$-Nearest Neighbors ($$K$$NN)
+  
+## Support Vector Machine (SVM)
+  
+## Linear Discriminant Analysis (LDA)
+  
+## Quadratic Discriminant Analysis (QDA)
+  
+## Logistic Regression
+  
+## Ensemble Learning
+  
+# Results  
+
+## $$K$$-Nearest Neighbors
+  
+## Support Vector Machine
+  
+## Linear Discriminant Analysis
+  
+## Quadratic Discriminant Analysis
+  
+## Logistic Regression
+  
+## Ensemble
+  
+# Discussion
+
+## Moderate performers
+  
+## Strong performer
+  
+## What happened with the ensemble model?
+  
+## Future directions
+  
+# Conclusion
+
+# Replication
+
+# Acknowledgements
+
+# References
