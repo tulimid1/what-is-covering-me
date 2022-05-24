@@ -3,8 +3,8 @@ layout: page
 title: Paper
 permalink: /Paper/
 mathjax: true
-header-includes: 
-    - \usepackage[ruled,vlined]{algorithm2e}
+header-includes:
+  - \usepackage{algorithm2e}
 ---
 # What's covering me? - Prediction of forest cover type based on cartographic variables
 
