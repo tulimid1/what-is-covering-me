@@ -77,6 +77,7 @@ Current methods for classifying forest cover types involve direct observations v
 <p align="center">
   <img src="figures/all_models_scores_kbg.png" />
 </p>
+
 % blackard and dean - Location map 
 \begin{figure}[!h]
     \centering
