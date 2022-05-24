@@ -3,8 +3,7 @@ layout: page
 title: Paper
 permalink: /Paper/
 mathjax: true
-bibliography:
-- ref.bib
+bibliography: ref.bib
 ---
 # What's covering me? - Prediction of forest cover type based on cartographic variables
 
