@@ -19,7 +19,7 @@ minimal: true             # use a dark header
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "code.md"}
   - {file: "data.md"}
-  - {file: "paper.md"}
+  - {file: "paper_full.html"}
   - {file: "presentation.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
