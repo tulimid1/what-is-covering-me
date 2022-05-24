@@ -109,7 +109,7 @@ instances, 54 predictors, and 7 classes. Examples of the seven cover
 type classifications can be seen in the pictures
 `\cite{Spruce}`{=latex},`\cite{Cottonwood}`{=latex},`\cite{Krumholz}`{=latex},`\cite{LodgepolePine}`{=latex},`\cite{Aspen}`{=latex},`\cite{PonderosaPine}`{=latex},`\cite{DouglasFir}`{=latex}.
 A condensed list of predictors can be seen in bottom right.
-](figures/Forest_Covers_wbg.png){#fig:forest_cover_types}
+](figures/Forest_Covers_kbg.png){#fig:forest_cover_types}
 
 ## Previous literature using forest cover type data set
 
@@ -210,7 +210,7 @@ all the hyper parameters.
 classification results. *NN*: neural network, *LDA*: linear discriminant
 analysis; *QDA* quadratic discriminant analysis. Republished from
 Blackard and Dean (1999)
-`\cite{blackard1999comparative}`{=latex}.](figures/BD_fig4_wbg.png){#fig:BB99_comp_models}
+`\cite{blackard1999comparative}`{=latex}.](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
 
 ### Oza and Russell (2001) `\cite{oza2001experimental}`{=latex}
 
@@ -271,7 +271,7 @@ reference="algo:KNN"}).
 ![$K$NN classifier on simulated data. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/KNN_Example_wbg.png){#fig:KNN_Hastie}
+`\cite{hastie2009elements}`{=latex}.](figures/KNN_Example_kbg.png){#fig:KNN_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$, $k$ **Output:**
@@ -301,7 +301,7 @@ goal of more effectively separating the classes.
 ![SVM classifier on simulated data. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/SVM_Example_wbg.png){#fig:SVM_Hastie}
+`\cite{hastie2009elements}`{=latex}.](figures/SVM_Example_kbg.png){#fig:SVM_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $X_{test}$, $C$, $Kernel$ **Output:**
@@ -337,7 +337,7 @@ single color. Each class's simulated data comes from a unique $\mu$
 vector with a shared $\Sigma$ matrix, therefore not violating the LDA
 assumptions. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/LDA_Example_wbg.png){#fig:LDA_Hastie}
+`\cite{hastie2009elements}`{=latex}.](figures/LDA_Example_kbg.png){#fig:LDA_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
@@ -365,7 +365,7 @@ single color. Each classes simulated data comes from a multivariate
 Gaussian with a unique $\mu$ vector and $\Sigma$ matrix. Shaded regions
 represent class prediction in the area. Inspiration from Hastie et al. -
 *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/QDA_Example_wbg.png){#fig:QDA_Hastie}
+`\cite{hastie2009elements}`{=latex}.](figures/QDA_Example_kbg.png){#fig:QDA_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
@@ -388,7 +388,7 @@ preferred.
 ![Logistic regression classifier example. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/LR_Example_wbg.png){#fig:LR_Hastie}
+`\cite{hastie2009elements}`{=latex}.](figures/LR_Example_kbg.png){#fig:LR_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $X_{test}$ **Output:** Predictions Use an
@@ -425,7 +425,7 @@ reference="fig:QDA_Hastie"}\], and Logistic Regression \[Figure
 with a majority vote for prediction. Shaded regions represent class
 prediction in the area. Inspiration from Hastie et al. - *Elements of
 Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/Ensemble_Example_wbg.png){#fig:Ensemble_Hastie}
+`\cite{hastie2009elements}`{=latex}.](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
 
 ::: algorithm
 **Input:** $K$NN, SVM, LDA, QDA, Logistic Regression, $X_{test}$
@@ -563,7 +563,7 @@ label="table:classification_confusion"}
 reference="eq:avg_accuracy"}. A threshold of 80% was used to determine
 if a model was considered a strong (i.e., $K$NN) or moderate performer
 (i.e., LDA, Logistic Regression, QDA, SVM,
-Ensemble)](figures/all_models_scores_wbg.png){#fig:all_acc_bar}
+Ensemble)](figures/all_models_scores_kbg.png){#fig:all_acc_bar}
 
 ## $K$-Nearest Neighbors
 
@@ -582,7 +582,7 @@ reference="fig:KNN_confuse"}).
 ![$K$NN parameter space. N neighbors refers the the number of neighbors
 ($k$) the algorithm used to classify a given observation. The weight
 parameter determines if the model should assign weights when referencing
-each N neighbor.](figures/KNN_params_wbg.png){#fig:KNN_params}
+each N neighbor.](figures/KNN_params_kbg.png){#fig:KNN_params}
 
 ![$K$NN confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color of each element is determined
@@ -591,7 +591,7 @@ overall number of instances for the actual class (Equation
 [\[eq:confusion_element\]](#eq:confusion_element){reference-type="ref"
 reference="eq:confusion_element"}, Table
 [2](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}).](figures/KNN_confusion_wbg.png){#fig:KNN_confuse}
+reference="table:classification_confusion"}).](figures/KNN_confusion_kbg.png){#fig:KNN_confuse}
 
 ## Support Vector Machine
 
@@ -612,13 +612,13 @@ reference="fig:SVM_confuse"}).
 ![SVM parameter space. Kernel refers to the function used by SVM to
 transform the data into a higher dimension. The C value is a
 regularization parameter that facilitates the amount of acceptable
-misclassifications](figures/SVM_params_wbg.png){#fig:SVM_params}
+misclassifications](figures/SVM_params_kbg.png){#fig:SVM_params}
 
 ![SVM confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
 calculated as found in Table
 [2](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/SVM_confusion_wbg.png){#fig:SVM_confuse}
+reference="table:classification_confusion"}.](figures/SVM_confusion_kbg.png){#fig:SVM_confuse}
 
 ## Linear Discriminant Analysis
 
@@ -639,13 +639,13 @@ to have confuse Douglas-firs for both Ponderosa and Lodgepole Pines.
 ![LDA parameter space. *svd* solver uses singular value decomposition;
 *lsqr* solver uses least squares solution; *eigen* solver uses
 eigenvalue decomposition
-`\cite{scikit-learn}`{=latex}.](figures/LDA_params_wbg.png){#fig:LDA_params}
+`\cite{scikit-learn}`{=latex}.](figures/LDA_params_kbg.png){#fig:LDA_params}
 
 ![LDA confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
 calculated as found in Table
 [2](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/LDA_confusion_wbg.png){#fig:LDA_confuse}
+reference="table:classification_confusion"}.](figures/LDA_confusion_kbg.png){#fig:LDA_confuse}
 
 ## Quadratic Discriminant Analysis
 
@@ -665,13 +665,13 @@ Spruce/Fir.
 ![QDA parameter space. Regulating parameter refers to the regularization
 of per-class covariance `\cite{scikit-learn}`{=latex}. Some bars have
 error bars due to binning of x-values and others do not have error bars
-because of no binning.](figures/QDA_params_wbg.png){#fig:QDA_params}
+because of no binning.](figures/QDA_params_kbg.png){#fig:QDA_params}
 
 ![QDA confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
 calculated as found in Table
 [2](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/QDA_confusion_wbg.png){#fig:QDA_confuse}
+reference="table:classification_confusion"}.](figures/QDA_confusion_kbg.png){#fig:QDA_confuse}
 
 ## Logistic Regression
 
@@ -695,7 +695,7 @@ Spruce/Fir.
 x-axis and the actual class is on the y-axis. The color (and value) of
 the elements are calculated as found in Table
 [2](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/Logistic Regression_confusion_wbg.png){#fig:LR_confuse}
+reference="table:classification_confusion"}.](figures/Logistic Regression_confusion_kbg.png){#fig:LR_confuse}
 
 ## Ensemble
 
@@ -712,7 +712,7 @@ misclssifying Aspen as Lodgepole Pine.
 and the actual class is on the y-axis. The color (and value) of the
 elements are calculated as found in Table
 [2](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/Ensemble_confusion_wbg.png){#fig:Ensemble_confuse}
+reference="table:classification_confusion"}.](figures/Ensemble_confusion_kbg.png){#fig:Ensemble_confuse}
 
 # Discussion
 
