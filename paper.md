@@ -68,6 +68,30 @@ Table of Contents
 ---
 
 # Introduction
+National parks are some of the most beautiful places on this little blue planet we call home. They are some of the only remaining "untouched" regions of Earth that allow nature to flourish. These parks, while untouched, are not ignored. In fact, they are some of the most studied regions around the world.
+
+The University of California Irvine's machine learning repository contains a large data set on the Roosevelt National Forest in northern Colorado. This data set -- known as the forest cover type data set -- is comprised of cartographic information from four parks within the Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la Poudre) (Figure \ref{fig:loc_map}). The data set contains a variety of continuous and categorical features obtained from geological surveys; including elevation, soil type, slope, hill shade at various times of day, and distance to the nearest body of water. Along with these features, each instance has a forest cover type classification, which refers to the predominant tree species in a given 30x30 meter region (Figure \ref{fig:forest_cover_types}).
+
+Current methods for classifying forest cover types involve direct observations via field personnel or estimation using remotely sensed data \cite{blackard1999comparative}. These approaches are often time-consuming and costly; however, the use of predictive models can streamline this process \cite{blackard1999comparative}. We decided to examine the accuracies of several machine learning algorithms and an ensemble learning method to predict forest cover types. Using these methods, our goal was to achieve the highest predictive power across all classes.
+
+<p align="center">
+  <img src="all_models_scores_kbg.png" />
+</p>
+% blackard and dean - Location map 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.4]{figures/BD99_location_map.png}
+    \caption{Study area location map. Taken from Blackard and Dean (1999) \cite{blackard1999comparative}.}
+    \label{fig:loc_map}
+\end{figure}
+
+\begin{figure}[!h] % add black outline and find summer! aspen picture
+    \centering
+    \includegraphics[scale=0.2]{figures/Forest_Covers_wbg.png}
+    \caption{Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures \cite{Spruce},\cite{Cottonwood},\cite{Krumholz},\cite{LodgepolePine},\cite{Aspen},\cite{PonderosaPine},\cite{DouglasFir}. A condensed list of predictors can be seen in bottom right. }
+    \label{fig:forest_cover_types}
+\end{figure}
+
 
 ## Previous literature using forest cover type data set
     
