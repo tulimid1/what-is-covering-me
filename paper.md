@@ -107,7 +107,7 @@ across all classes.
 ![Forest cover types and predictors. The data set contains 581,012
 instances, 54 predictors, and 7 classes. Examples of the seven cover
 type classifications can be seen in the pictures
-`\cite{Spruce}`{=latex},`\cite{Cottonwood}`{=latex},`\cite{Krumholz}`{=latex},`\cite{LodgepolePine}`{=latex},`\cite{Aspen}`{=latex},`\cite{PonderosaPine}`{=latex},`\cite{DouglasFir}`{=latex}.
+[14](#references),[13](#references),[7](#references),[15](#references),[3](#references),[1](#references),[5](#references).
 A condensed list of predictors can be seen in bottom right.
 ](figures/Forest_Covers_kbg.png){#fig:forest_cover_types}
 
@@ -212,11 +212,11 @@ analysis; *QDA* quadratic discriminant analysis. Republished from
 Blackard and Dean (1999)
 [2](#references).](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
 
-### Oza and Russell (2001) `\cite{oza2001experimental}`{=latex}
+### Oza and Russell (2001) [8](#references)
 
 In 2001, Oza and Russell utilized the forest cover type data set as one
 of many large data sets to validate alternative versions of traditional
-ensemble learning algorithms `\cite{oza2001experimental}`{=latex}.
+ensemble learning algorithms [8](#references).
 Ensemble learning utilize multiple machine learning techniques that are
 combined to achieve an improved predictive performance. Many of these
 algorithms involve the use of weights, which mediate the occurrence of
@@ -226,13 +226,13 @@ One example of weighted ensemble learning is bagging, which
 traditionally trains several models, each with randomly re-sampled
 subsets of data, and combines their predictions. The authors created an
 online version of bagging that assigns weights to each sample to mediate
-occurrences during re-sampling `\cite{oza2001experimental}`{=latex}.
+occurrences during re-sampling [8](#references).
 Another example of weighted ensemble learning is boosting, which
 sequentially retrains a single model based on the errors of previous
 iterations. While traditional boosting updates weights based on
 performance on the entire training data set, online boosting updates
 weights using only samples the model has seen before
-`\cite{oza2001experimental}`{=latex}. For example, if the first
+[8](#references). For example, if the first
 iteration only uses 100 unique samples, the testing set for this model
 will only be those 100 instances. If the next iteration of model
 training observes 50 more unique samples, then the testing set for this
@@ -271,7 +271,7 @@ reference="algo:KNN"}).
 ![$K$NN classifier on simulated data. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/KNN_Example_kbg.png){#fig:KNN_Hastie}
+[6](#references).](figures/KNN_Example_kbg.png){#fig:KNN_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$, $k$ **Output:**
@@ -301,7 +301,7 @@ goal of more effectively separating the classes.
 ![SVM classifier on simulated data. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/SVM_Example_kbg.png){#fig:SVM_Hastie}
+[6](#references).](figures/SVM_Example_kbg.png){#fig:SVM_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $X_{test}$, $C$, $Kernel$ **Output:**
@@ -337,7 +337,7 @@ single color. Each class's simulated data comes from a unique $\mu$
 vector with a shared $\Sigma$ matrix, therefore not violating the LDA
 assumptions. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/LDA_Example_kbg.png){#fig:LDA_Hastie}
+[6](#references).](figures/LDA_Example_kbg.png){#fig:LDA_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
@@ -365,7 +365,7 @@ single color. Each classes simulated data comes from a multivariate
 Gaussian with a unique $\mu$ vector and $\Sigma$ matrix. Shaded regions
 represent class prediction in the area. Inspiration from Hastie et al. -
 *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/QDA_Example_kbg.png){#fig:QDA_Hastie}
+[6](#references).](figures/QDA_Example_kbg.png){#fig:QDA_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
@@ -388,7 +388,7 @@ preferred.
 ![Logistic regression classifier example. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/LR_Example_kbg.png){#fig:LR_Hastie}
+[6](#references).](figures/LR_Example_kbg.png){#fig:LR_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $X_{test}$ **Output:** Predictions Use an
@@ -410,7 +410,7 @@ assumptions and biases allows algorithms to account for each other's
 weaknesses. If the multiple assumptions and biases of each algorithm
 produce a series of weak learners with poor performances, combining them
 can produce a more stable and accurate prediction
-`\cite{sagi2018ensemble}`{=latex}.
+[10](#references).
 
 ![Ensemble classifier on simulated data. Each class is represented by a
 single color. The ensemble classifier is made from the previous models
@@ -425,7 +425,7 @@ reference="fig:QDA_Hastie"}\], and Logistic Regression \[Figure
 with a majority vote for prediction. Shaded regions represent class
 prediction in the area. Inspiration from Hastie et al. - *Elements of
 Statistical Learning*
-`\cite{hastie2009elements}`{=latex}.](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
+[6](#references).](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
 
 ::: algorithm
 **Input:** $K$NN, SVM, LDA, QDA, Logistic Regression, $X_{test}$
@@ -437,10 +437,10 @@ Statistical Learning*
 In order to assess how well our models performed we used multiple
 performance metrics. Our first metric of performance was accuracy
 (Equation [\[eq:avg_accuracy\]](#eq:avg_accuracy){reference-type="ref"
-reference="eq:avg_accuracy"} `\cite{scikit-learn}`{=latex}). Accuracy
+reference="eq:avg_accuracy"} [9](#references)). Accuracy
 provided an overall idea of the model's performance. However, in
 multi-class classification this can be a harsh way to measure true
-accuracy `\cite{scikit-learn}`{=latex}. Additionally, we used a
+accuracy [9](#references). Additionally, we used a
 confusion matrix to better understand the accuracy of within and between
 class predictions (Table
 [2](#table:classification_confusion){reference-type="ref"
@@ -639,7 +639,7 @@ to have confuse Douglas-firs for both Ponderosa and Lodgepole Pines.
 ![LDA parameter space. *svd* solver uses singular value decomposition;
 *lsqr* solver uses least squares solution; *eigen* solver uses
 eigenvalue decomposition
-`\cite{scikit-learn}`{=latex}.](figures/LDA_params_kbg.png){#fig:LDA_params}
+[9](#references).](figures/LDA_params_kbg.png){#fig:LDA_params}
 
 ![LDA confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
@@ -663,7 +663,7 @@ Lodgepole Pines, Douglas-fir for Ponderosa Pines, and Krummholz for
 Spruce/Fir.
 
 ![QDA parameter space. Regulating parameter refers to the regularization
-of per-class covariance `\cite{scikit-learn}`{=latex}. Some bars have
+of per-class covariance [9](#references). Some bars have
 error bars due to binning of x-values and others do not have error bars
 because of no binning.](figures/QDA_params_kbg.png){#fig:QDA_params}
 
@@ -725,7 +725,7 @@ boundaries that can lead to multiple misclassifications (Figure
 [8](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}).
 Logistic regression also assumes there is little to no multicollinearity
 among features, which may occur in this data set
-`\cite{senaviratna2019diagnosing}`{=latex}.
+[11](#references).
 
 As previously stated, LDA assumes that each class shares the same
 covariance matrix while QDA assumes each class has their own. Since QDA
@@ -738,9 +738,9 @@ SVM had the poorest performance of the models included in our ensemble.
 There are two characteristics of the data that may have impacted SVM's
 accuracy. First, when several classes overlap within a data set, SVM
 will have difficulty separating the classes
-`\cite{shojae2020pfw}`{=latex}. Secondly, SVM tends to perform best when
+[12](#references). Secondly, SVM tends to perform best when
 the number of features far exceeds the number of observations
-`\cite{caruana2008empirical}`{=latex}. Both of these issues are
+[4](#references). Both of these issues are
 typically mitigated with the use of a kernel that transforms the data
 into a different space. However, we chose to use a linear kernel that
 only performs a simple transformation. Unlike the other models, the
@@ -756,7 +756,7 @@ $K$NN was our strongest model. This may be due to $K$NN not having any
 of the assumptions tied to the moderate performers. Additionally, $K$NN
 has a tendency to perform well when the number of observations is far
 greater than the number of features
-`\cite{caruana2008empirical}`{=latex}. During the training of $K$NN, the
+[4](#references). During the training of $K$NN, the
 model stores the training instances that are referenced during testing.
 While a large number of instances may produce high computation times,
 they are necessary to produce an accurate classification of unknown
@@ -832,7 +832,7 @@ accuracy of 96.87%. The rest of our models performed moderately with
 accuracies between 61.70% and 71.66% (i.e. LDA, Logistic, QDA, SVM). To
 combine each classifier's prediction we used an unweighted majority
 vote, which has been shown to increase performance
-`\cite{sagi2018ensemble}`{=latex}.
+[10](#references).
 
 Our ensemble classification performed poorly when compared to $K$NN with
 an accuracy of 75.35%; however, it did perform better than each of our
