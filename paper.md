@@ -67,7 +67,7 @@ Table of Contents
 
 ---
 
-# Introductio
+# Introduction
 
 ## Previous literature using forest cover type data set
     
