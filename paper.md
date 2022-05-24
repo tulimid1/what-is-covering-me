@@ -101,8 +101,8 @@ and an ensemble learning method to predict forest cover types. Using
 these methods, our goal was to achieve the highest predictive power
 across all classes.
 
-![Study area location map. Taken from Blackard and Dean (1999)
-[2](#references).](figures/BD99_location_map.png){#fig:loc_map}
+![](figures/BD99_location_map.png "Study area location map. Taken from Blackard and Dean (1999)
+[2](#references)."){#fig:loc_map}
 
 ![Forest cover types and predictors. The data set contains 581,012
 instances, 54 predictors, and 7 classes. Examples of the seven cover
