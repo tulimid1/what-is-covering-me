@@ -70,44 +70,15 @@ Table of Contents
 
 # Introduction
 
-National parks are some of the most beautiful places on this little blue
-planet we call home. They are some of the only remaining \"untouched\"
-regions of Earth that allow nature to flourish. These parks, while
-untouched, are not ignored. In fact, they are some of the most studied
-regions around the world.
+National parks are some of the most beautiful places on this little blueplanet we call home. They are some of the only remaining \"untouched\"regions of Earth that allow nature to flourish. These parks, whileuntouched, are not ignored. In fact, they are some of the most studiedregions around the world.
 
-The University of California Irvine's machine learning repository
-contains a large data set on the Roosevelt National Forest in northern
-Colorado. This data set -- known as the forest cover type data set -- is
-comprised of cartographic information from four parks within the
-Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la
-Poudre) (Figure [1]). The data set contains a variety of continuous
-and categorical features obtained from geological surveys; including
-elevation, soil type, slope, hill shade at various times of day, and
-distance to the nearest body of water. Along with these features, each
-instance has a forest cover type classification, which refers to the
-predominant tree species in a given 30x30 meter region (Figure
-[[2]](#fig:forest_cover_types){reference-type="ref"
-reference="fig:forest_cover_types"}).
+The University of California Irvine's machine learning repositorycontains a large data set on the Roosevelt National Forest in northernColorado. This data set -- known as the forest cover type data set -- iscomprised of cartographic information from four parks within theRoosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache laPoudre) (Figure [1]). The data set contains a variety of continuousand categorical features obtained from geological surveys; includingelevation, soil type, slope, hill shade at various times of day, anddistance to the nearest body of water. Along with these features, eachinstance has a forest cover type classification, which refers to thepredominant tree species in a given 30x30 meter region (Figure[2]).
 
-Current methods for classifying forest cover types involve direct
-observations via field personnel or estimation using remotely sensed
-data [[2]](#references). These approaches are
-often time-consuming and costly; however, the use of predictive models
-can streamline this process [[2]](#references). We
-decided to examine the accuracies of several machine learning algorithms
-and an ensemble learning method to predict forest cover types. Using
-these methods, our goal was to achieve the highest predictive power
-across all classes.
+Current methods for classifying forest cover types involve directobservations via field personnel or estimation using remotely senseddata [[2]](#references). These approaches areoften time-consuming and costly; however, the use of predictive modelscan streamline this process [[2]](#references). Wedecided to examine the accuracies of several machine learning algorithmsand an ensemble learning method to predict forest cover types. Usingthese methods, our goal was to achieve the highest predictive poweracross all classes.
 
 ![](figures/BD99_location_map.png) Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
-![Forest cover types and predictors. The data set contains 581,012
-instances, 54 predictors, and 7 classes. Examples of the seven cover
-type classifications can be seen in the pictures
-[[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references).
-A condensed list of predictors can be seen in bottom right.
-](figures/Forest_Covers_kbg.png){#fig:forest_cover_types}
+![](figures/Forest_Covers_kbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012instances, 54 predictors, and 7 classes. Examples of the seven covertype classifications can be seen in the pictures[[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references). A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
 
