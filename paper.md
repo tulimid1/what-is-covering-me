@@ -253,28 +253,12 @@ for i,x in enumerate(X_test)
 
 # Results
 
-In order to assess how well our models performed we used multiple
-performance metrics. Our first metric of performance was accuracy
-(Equation [\[eq:avg_accuracy\]](#eq:avg_accuracy){reference-type="ref"
-reference="eq:avg_accuracy"} [[9]](#references)). Accuracy
-provided an overall idea of the model's performance. However, in
-multi-class classification this can be a harsh way to measure true
-accuracy [[9]](#references). Additionally, we used a
-confusion matrix to better understand the accuracy of within and between
-class predictions (Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}, Equation
-[\[eq:confusion_element\]](#eq:confusion_element){reference-type="ref"
-reference="eq:confusion_element"}). A perfect multi-class classifier
-would have a confusion matrix with 100% accuracy on the diagonal and 0%
-accuracy everywhere else. On the other hand, a completely inaccurate
-multi-class classifier would have a confusion matrix with 0% on the
-diagonal and various percentages everywhere else.
+In order to assess how well our models performed we used multiple performance metrics. Our first metric of performance was accuracy (Equation 1 [[9]](#references)). Accuracy provided an overall idea of the model's performance. However, in multi-class classification this can be a harsh way to measure true accuracy [[9]](#references). Additionally, we used a confusion matrix to better understand the accuracy of within and between class predictions (Table 2, Equation 2). A perfect multi-class classifier would have a confusion matrix with 100% accuracy on the diagonal and 0% accuracy everywhere else. On the other hand, a completely inaccurate multi-class classifier would have a confusion matrix with 0% on the diagonal and various percentages everywhere else.
 
-$$accuracy(y,\hat{y}) = \frac{1}{n_{samples}} \Sigma_{i=0}^{n_{samples}-1} 1(\hat{y_i} = y_i)
+Equation 1. $$accuracy(y,\hat{y}) = \frac{1}{n_{samples}} \Sigma_{i=0}^{n_{samples}-1} 1(\hat{y_i} = y_i)
     \label{eq:avg_accuracy}$$
 
-$$confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
+Equation 2. $$confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
     \label{eq:confusion_element}$$
 
 ::: center
