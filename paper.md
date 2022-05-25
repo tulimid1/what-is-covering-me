@@ -78,7 +78,7 @@ Current methods for classifying forest cover types involve direct observations v
 
 ![](figures/BD99_location_map.png) Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
-![](figures/Forest_Covers_wbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references). A condensed list of predictors can be seen in bottom right.
+![](figures/Forest_Covers_bbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references). A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
 
@@ -86,89 +86,26 @@ Current methods for classifying forest cover types involve direct observations v
 
 Blackard and Dean were the first to publish on this data set [[2]](#references). These authors compared the performance of a neural network, a linear discriminant analysis model, and a quadratic discriminant analysis model on multiple subsets of the data set. The authors split the data set into six subsets (Table [1]). These subsets were chosen because the authors had *a priori* ideas about which predictors would hold large predictive power and wished to test these hypotheses.
 
-| Number of independent variables   |                      Description of variables                        |
-| --------------------------------- | -------------------------------------------------------------------- |
-|                 9                 |   Same as '10' but excluding distance-to-wildfire-ignition-points    |
-|                 10                |                    Ten quantitative variables only                   |
-|                 20                |    Same as '21' but excluding distance-to-wildfire-ignition-points   |
-|                 21                |         Ten quantitative variables + 11 generalized soil types       |
-|                 53                |    Same as '54' but excluding distance-to-wildfire-ignition-points   |
-|                 54                |   Ten quantitative variables + four wilderness areas + 40 soil types |
+| Number of independent variables   |                      Description of variables                        
+| --------------------------------- | -------------------------------------------------------------------- 
+|                 9                 |   Same as '10' but excluding distance-to-wildfire-ignition-points    
+|                 10                |                    Ten quantitative variables only                   
+|                 20                |    Same as '21' but excluding distance-to-wildfire-ignition-points   
+|                 21                |         Ten quantitative variables + 11 generalized soil types       
+|                 53                |    Same as '54' but excluding distance-to-wildfire-ignition-points   
+|                 54                |   Ten quantitative variables + four wilderness areas + 40 soil types 
 
 Table 1. Number of input variable subsets examined. Taken from Blackard and Dean (1999) [[2]](#references).
 
-To train the best neural network, the authors did multiple iterations of
-editing model parameters [[2]](#references). The
-neural network was initialized and kept to one input layer, one hidden
-layer, and one output layer. These layers were dense with no dropouts.
-The authors systematically changed the number of nodes in the hidden
-layer to determine the best learning and momentum rates. To update the
-weights, the neural network used back propagation. The weights for this
-model were initialized by randomly sampling from a uniform distribution
-between negative and positive one. The activation functions for the
-hidden layers were linear, while the activation function for the output
-layers were logistic. After the authors found an optimal set of
-parameters, they verified these parameters were optimal by creating
-thirty new neural networks with randomized initial synaptic weights. The
-authors state this process was used to ensure the weight space was fully
-explored due to the stochastic nature of initializing weights. After
-parameter tuning, a neural network with 54 input nodes, 120 hidden layer
-nodes, 7 output nodes, a learning rate of 0.05, and a momentum rate of
-0.5 was determined to be optimal. This neural network had the highest
-classification accuracy of 70.58% with all 54 predictors (Figure
-[[3]](#fig:BB99_comp_models){reference-type="ref"
-reference="fig:BB99_comp_models"}).
+To train the best neural network, the authors did multiple iterations of editing model parameters [[2]](#references). The neural network was initialized and kept to one input layer, one hidden layer, and one output layer. These layers were dense with no dropouts. The authors systematically changed the number of nodes in the hidden layer to determine the best learning and momentum rates. To update the weights, the neural network used back propagation. The weights for this model were initialized by randomly sampling from a uniform distribution between negative and positive one. The activation functions for the hidden layers were linear, while the activation function for the output layers were logistic. After the authors found an optimal set of parameters, they verified these parameters were optimal by creating thirty new neural networks with randomized initial synaptic weights. The authors state this process was used to ensure the weight space was fully explored due to the stochastic nature of initializing weights. After parameter tuning, a neural network with 54 input nodes, 120 hidden layer nodes, 7 output nodes, a learning rate of 0.05, and a momentum rate of 0.5 was determined to be optimal. This neural network had the highest classification accuracy of 70.58% with all 54 predictors (Figure [3]).
 
-The authors also implemented both linear and quadratic discriminant
-analyses, which required less parameter tuning than neural networks, but
-at the cost of flexibility [[2]](#references). The
-quadratic discriminant analysis model was able to make predictions on
-subsets that did not contain categorical features and became unstable
-upon their addition. Of the subsets of data tested, the linear
-discriminant analysis model had the highest classification accuracy
-(\~58.38%) with all 54 predictors (Figure
-[[3]](#fig:BB99_comp_models){reference-type="ref"
-reference="fig:BB99_comp_models"}). The quadratic discriminant analysis
-model achieved its highest classification accuracy (\~49.15%) with 10
-predictors (Figure [[3]](#fig:BB99_comp_models){reference-type="ref"
-reference="fig:BB99_comp_models"}).
+The authors also implemented both linear and quadratic discriminant analyses, which required less parameter tuning than neural networks, but at the cost of flexibility [[2]](#references). The quadratic discriminant analysis model was able to make predictions on subsets that did not contain categorical features and became unstable upon their addition. Of the subsets of data tested, the linear discriminant analysis model had the highest classification accuracy (\~58.38%) with all 54 predictors (Figure [3]). The quadratic discriminant analysis model achieved its highest classification accuracy (\~49.15%) with 10 predictors (Figure [3]).
 
-Overall, the authors were able to create a model that predicted the
-forest cover type well. All the models tested were able to perform
-better than chance (14%) (Figure
-[[3]](#fig:BB99_comp_models){reference-type="ref"
-reference="fig:BB99_comp_models"}). The neural network achieved the
-highest overall accuracy (\~71%) when the model included all the
-variables. As expected, the neural network showed a steady increase in
-accuracy as more predictors were added. Additionally, the discriminant
-analyses also showed an increase in accuracy as more predictors were
-added.
+Overall, the authors were able to create a model that predicted the forest cover type well. All the models tested were able to perform better than chance (14%) (Figure [3]). The neural network achieved the highest overall accuracy (\~71%) when the model included all the variables. As expected, the neural network showed a steady increase in accuracy as more predictors were added. Additionally, the discriminant analyses also showed an increase in accuracy as more predictors were added.
 
-The authors pose many reasons the neural network outperformed the
-discriminant analyses. One potential reason for this discrepancy could
-have been due to the underlying assumptions of the discriminant analysis
-models. Linear discriminant analysis models each class as a multivariate
-Gaussian distribution and assumes all classes share a covariance matrix.
-On the other hand, quadratic discriminant analysis models assume each
-class is normally distributed and that each class has its own covariance
-matrix. A neural network has no assumptions about the underlying
-distributions and therefore will be most flexible in modeling data. The
-authors state that another reason the discriminant analyses could have
-performed worse than neural networks was due to the non-linearity of the
-data. Discriminant analyses perform well with linear data while neural
-networks are flexible in regards to the linearity of the data. On the
-other hand, one area where the discriminant analyses outperformed the
-neural network was in computational time. The discriminant analyses took
-only 5 hours to run, while the neural network, once finalized, took 45
-hours to finalize. The 45 hour run time of the neural network also did
-not take into account the time needed for the operator to manually tune
-all the hyper parameters.
+The authors pose many reasons the neural network outperformed the discriminant analyses. One potential reason for this discrepancy could have been due to the underlying assumptions of the discriminant analysis models. Linear discriminant analysis models each class as a multivariate Gaussian distribution and assumes all classes share a covariance matrix. On the other hand, quadratic discriminant analysis models assume each class is normally distributed and that each class has its own covariance matrix. A neural network has no assumptions about the underlying distributions and therefore will be most flexible in modeling data. The authors state that another reason the discriminant analyses could have performed worse than neural networks was due to the non-linearity of the data. Discriminant analyses perform well with linear data while neural networks are flexible in regards to the linearity of the data. On the other hand, one area where the discriminant analyses outperformed the neural network was in computational time. The discriminant analyses took only 5 hours to run, while the neural network, once finalized, took 45 hours to finalize. The 45 hour run time of the neural network also did not take into account the time needed for the operator to manually tune all the hyper parameters.
 
-![Comparison of artificial neural network and discriminant analysis
-classification results. *NN*: neural network, *LDA*: linear discriminant
-analysis; *QDA* quadratic discriminant analysis. Republished from
-Blackard and Dean (1999)
-[[2]](#references).](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
+![](figures/BD_fig4_kbg.png){#fig:BB99_comp_models} Figure 3. Comparison of artificial neural network and discriminant analysis classification results. *NN*: neural network, *LDA*: linear discriminant analysis; *QDA* quadratic discriminant analysis. Republished from Blackard and Dean (1999) [[2]](#references).
 
 ### Oza and Russell (2001) [[8]](#references)
 
