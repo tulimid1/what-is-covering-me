@@ -77,9 +77,11 @@ The University of California Irvine's machine learning repository contains a lar
 Current methods for classifying forest cover types involve direct observations via field personnel or estimation using remotely sensed data [[2]](#references). These approaches are often time-consuming and costly; however, the use of predictive models can streamline this process [[2]](#references). We decided to examine the accuracies of several machine learning algorithms and an ensemble learning method to predict forest cover types. Using these methods, our goal was to achieve the highest predictive poweracross all classes.
 
 ![](figures/BD99_location_map.png) 
+
 Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
 ![](figures/Forest_Covers_bbg.png) 
+
 Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references), [[13]](#references), [[7]](#references), [[15]](#references), [[3]](#references), [[1]](#references), [[5]](#references). A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
@@ -108,6 +110,7 @@ Overall, the authors were able to create a model that predicted the forest cover
 The authors pose many reasons the neural network outperformed the discriminant analyses. One potential reason for this discrepancy could have been due to the underlying assumptions of the discriminant analysis models. Linear discriminant analysis models each class as a multivariate Gaussian distribution and assumes all classes share a covariance matrix. On the other hand, quadratic discriminant analysis models assume each class is normally distributed and that each class has its own covariance matrix. A neural network has no assumptions about the underlying distributions and therefore will be most flexible in modeling data. The authors state that another reason the discriminant analyses could have performed worse than neural networks was due to the non-linearity of the data. Discriminant analyses perform well with linear data while neural networks are flexible in regards to the linearity of the data. On the other hand, one area where the discriminant analyses outperformed the neural network was in computational time. The discriminant analyses took only 5 hours to run, while the neural network, once finalized, took 45 hours to finalize. The 45 hour run time of the neural network also did not take into account the time needed for the operator to manually tune all the hyper parameters.
 
 ![](figures/BD_fig4_kbg.png) 
+
 Figure 3. Comparison of artificial neural network and discriminant analysis classification results. *NN*: neural network, *LDA*: linear discriminant analysis; *QDA* quadratic discriminant analysis. Republished from Blackard and Dean (1999) [[2]](#references).
 
 ### Oza and Russell (2001) [[8]](#references)
@@ -123,7 +126,8 @@ One example of weighted ensemble learning is bagging, which traditionally trains
 $$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$NN classifies based on the $$K$$ closest neighbors. The $$K$$ parameter determines how many of the closest observations are considered when classifying a given sample (Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}). For example, if $$K$$ is equal to three, then the algorithm will consider the three closest training observations to the test instance and predict the classification of the new instance based on a majority vote of the three closest training observations (Figure [[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}). Another parameter commonly given to $$K$$NN is the method for applying weights to each neighbor's vote during classification. A common technique is to base the weights on the distances between observations, with closer observations having a \"stronger\" vote. The weights can be determined by the inverse of the distance between observations, so closer instances have a \"stronger\" vote during classification (Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}).
 
 ![](figures/KNN_Example_kbg.png)
-$$K$$NN classifier on simulated data. Each class is represented by a single color. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+
+Figure 4. $$K$$NN classifier on simulated data. Each class is represented by a single color. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$, $$K$$ **Output:**
