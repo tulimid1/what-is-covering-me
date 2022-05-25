@@ -167,13 +167,13 @@ begin
 
 ## Linear Discriminant Analysis (LDA)
 
-Linear discriminant analysis (LDA) is another good method for classifying data; that is, when the assumptions of the model hold true. LDA assumes that all the predictors are normally distributed. Naturally, this algorithm models the data as a multivariate Gaussian (Algorithm 3). More specifically, each class has a mean ($\mu$) vector for all predictors, but each class does not have their own covariance ($\Sigma$) matrix. Instead, all classes are assumed to share a $\Sigma$ matrix. These assumptions can reasonably model data when there is enough to obtain an estimate of central tendency, but not enough to get a stable estimate of dispersion within predictors and correlation between predictors (Figure 6).
+Linear discriminant analysis (LDA) is another good method for classifying data; that is, when the assumptions of the model hold true. LDA assumes that all the predictors are normally distributed. Naturally, this algorithm models the data as a multivariate Gaussian (Algorithm 3). More specifically, each class has a mean ($$\mu$$) vector for all predictors, but each class does not have their own covariance ($$\Sigma$$) matrix. Instead, all classes are assumed to share a $$\Sigma$$ matrix. These assumptions can reasonably model data when there is enough to obtain an estimate of central tendency, but not enough to get a stable estimate of dispersion within predictors and correlation between predictors (Figure 6).
 
 Like all models, LDA will perform poorly if the assumptions are violated. For example, if most features are normally distributed but a powerful predictor has a Poisson distribution, its predictive power will go to waste because it is being poorly modeled. While the previous example can be fixed by scaling the differently distributed predictor, this algorithm has no way to account for each class having a different covariance matrix.
 
 ![](figures/LDA_Example_kbg.png)
 
-Figure 6. LDA classifier on simulated data. Each class is represented by a single color. Each class's simulated data comes from a unique $\mu$ vector with a shared $\Sigma$ matrix, therefore not violating the LDA assumptions. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+Figure 6. LDA classifier on simulated data. Each class is represented by a single color. Each class's simulated data comes from a unique $$\mu$$ vector with a shared $$\Sigma$$ matrix, therefore not violating the LDA assumptions. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ````
 Algorithm 3. Linear Discriminant Analysis 
@@ -191,11 +191,11 @@ for i, x in enumerate(X_test)
 
 ## Quadratic Discriminant Analysis (QDA)
 
-Quadratic discriminant analysis (QDA) is another algorithm for classifying data, and is more flexible in how it models data compared to LDA. Both LDA and QDA model central tendency the same, with a $\mu$ vector for each class, but model within and between dispersion ($\Sigma$) differently. Whereas LDA models $\Sigma$ for all classes together, QDA will model $\Sigma$ for each class separately (Algorithm 4). This small difference will allow this algorithm more flexibility around classes having different relationships between and within predictors (Figure 7). However, there must be enough data in each class to allow reasonable estimation of within and between dispersion. If not, QDA will suffer and LDA may be the stronger model.
+Quadratic discriminant analysis (QDA) is another algorithm for classifying data, and is more flexible in how it models data compared to LDA. Both LDA and QDA model central tendency the same, with a $$\mu$$ vector for each class, but model within and between dispersion ($$\Sigma$$) differently. Whereas LDA models $$\Sigma$$ for all classes together, QDA will model $$\Sigma$$ for each class separately (Algorithm 4). This small difference will allow this algorithm more flexibility around classes having different relationships between and within predictors (Figure 7). However, there must be enough data in each class to allow reasonable estimation of within and between dispersion. If not, QDA will suffer and LDA may be the stronger model.
 
 ![](figures/QDA_Example_kbg.png)
 
-Figure 7. QDA classifier on simulated data. Each class is represented by a single color. Each classes simulated data comes from a multivariate Gaussian with a unique $\mu$ vector and $\Sigma$ matrix. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+Figure 7. QDA classifier on simulated data. Each class is represented by a single color. Each classes simulated data comes from a multivariate Gaussian with a unique $$\mu$$ vector and $$\Sigma$$ matrix. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ````
 Algorithm 4. Quadratic Discriminant Analysis 
@@ -238,9 +238,7 @@ Ensemble learning is a technique that utilizes several models to increase predic
 
 ![](figures/Ensemble_Example_kbg.png)
 
-Figure 9. Ensemble classifier on simulated data. Each class is represented by a
-single color. The ensemble classifier is made from the previous models
-trained on the simulated data (e.g., $$K$$NN \[Figure 4\], SVM \[Figure 5\], LDA \[Figure 6]\], QDA \[Figure 7\], and Logistic Regression \[Figure 8\]) with a majority vote for prediction. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+Figure 9. Ensemble classifier on simulated data. Each class is represented by a single color. The ensemble classifier is made from the previous models trained on the simulated data (e.g., $$K$$NN \[Figure 4\], SVM \[Figure 5\], LDA \[Figure 6]\], QDA \[Figure 7\], and Logistic Regression \[Figure 8\]) with a majority vote for prediction. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ````
 Algorithm 6. Ensemble 
