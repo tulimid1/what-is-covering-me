@@ -264,16 +264,16 @@ Equation 2. $$ confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
 |       |       | $$SF_p$$ | $$LP_p$$ | $$PP_p$$  | $$CW_p$$  | $$A_p$$ | $$Df_p$$  | $$K_p$$ |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
-|       | SF_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
-|    A  |       | {\Sig | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
-| ctual |       | ma 1( | ma 1( | ma 1( | ma 1( | (SF_A | ma 1( | (SF_A |
-| Class |       | SF_A  | SF_A  | SF_A  | SF_A  |  = A_ | SF_A  |  = K_ |
-|       |       | = SF_ | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
-|       |       | p)}{\ | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
-|       |       | Sigma | Sigma | Sigma | Sigma |  1(SF | Sigma |  1(SF |
-|       |       |  1(SF |  1(SF |  1(SF |  1(SF | _A)}$$ |  1(SF | _A)}$$ |
-|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
+| Actual Class  | $$\frac{\Sigma 1(SF_A= SF_p)}{\Sigma1(SF_A)}$$    | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
+|       | SF_A$$ |  | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
+|    A  |       |  | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
+| ctual |       |  | ma 1( | ma 1( | ma 1( | (SF_A | ma 1( | (SF_A |
+| Class |       |   | SF_A  | SF_A  | SF_A  |  = A_ | SF_A  |  = K_ |
+|       |       |  | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
+|       |       |  | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
+|       |       |  | Sigma | Sigma | Sigma |  1(SF | Sigma |  1(SF |
+|       |       |   |  1(SF |  1(SF |  1(SF | _A)}$$ |  1(SF | _A)}$$ |
+|       |       |  | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
 |       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
 |       | LP_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
