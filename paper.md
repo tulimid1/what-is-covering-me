@@ -354,7 +354,7 @@ Figure 10. Model scores on test set. Scores were calculated according to Equatio
 
 ## $$K$$-Nearest Neighbors
 
-We used 10 fold cross-validation to determine the optimal number of neighbors and the type of weight for our $$K$$NN model. We found that *5* neighbors with a weight based on *distance* produced the best performance with an accuracy of 96.87\% (Figures 11 \& 10). $$K$$NN was able to reliably predict a majority of the forest cover types; however, the model repeatedly confused Cottonwood/Willow with Ponderosa Pine or Douglas-fir (Figure 12).
+We used 10 fold cross-validation to determine the optimal number of neighbors and the type of weight for our $$K$$NN model. We found that *5* neighbors with a weight based on *distance* produced the best performance with an accuracy of 96.87% (Figures 11 & 10). $$K$$NN was able to reliably predict a majority of the forest cover types; however, the model repeatedly confused Cottonwood/Willow with Ponderosa Pine or Douglas-fir (Figure 12).
 
 ![](figures/KNN_params_kbg.png)
 
@@ -432,7 +432,7 @@ $$K$$NN was our strongest model. This may be due to $$K$$NN not having any of th
 
 ## What happened with the ensemble model?
 
-One of the strengths of using an ensemble method with several types of models is that the varying assumptions underlying each model tend to work against each other in a productive manner. For example, if LDA incorrectly assumes each class shares a covariance matrix -- which leads to multiple misclassifications -- then including other models in the ensemble that do not share this assumption can potentially lead to an overall correct classification through majority vote. This scenario assumes that each model has a similar performance on the training set. Yet, this is not the case for our ensemble. Since a majority of our models have a significant amount of misclassifications (Figure 10), there is an increased likelihood that the several moderate performers will have a stronger influence on the majority vote than the one strong performer. For example, SVM, LDA, QDA, and Logistic regression all produced poor classifications for Aspen; however, $$K$$NN can reliably classify Aspen with \~95\% accuracy. Despite the strong classification of Aspen via $$K$$NN, the ensemble model's classification of Aspen was poor. Within this scenario, the multiple moderate performers are likely taking weight away from the single strong performer, leading to misclassifications.
+One of the strengths of using an ensemble method with several types of models is that the varying assumptions underlying each model tend to work against each other in a productive manner. For example, if LDA incorrectly assumes each class shares a covariance matrix -- which leads to multiple misclassifications -- then including other models in the ensemble that do not share this assumption can potentially lead to an overall correct classification through majority vote. This scenario assumes that each model has a similar performance on the training set. Yet, this is not the case for our ensemble. Since a majority of our models have a significant amount of misclassifications (Figure 10), there is an increased likelihood that the several moderate performers will have a stronger influence on the majority vote than the one strong performer. For example, SVM, LDA, QDA, and Logistic regression all produced poor classifications for Aspen; however, $$K$$NN can reliably classify Aspen with \~95% accuracy. Despite the strong classification of Aspen via $$K$$NN, the ensemble model's classification of Aspen was poor. Within this scenario, the multiple moderate performers are likely taking weight away from the single strong performer, leading to misclassifications.
 
 ## Future directions
 
@@ -440,9 +440,9 @@ There are many future directions this project can take; here we focus on some th
 
 # Conclusion
 
-We set out to create a model that was able to accurately predict forest cover type from 54 cartographic variables describing a plethora of 30x30 meter regions of the Roosevelt National Forest. To accomplish this, we created an ensemble classifier consisting of several linear and non-linear classifiers. $$K$$NN was our strongest classifier with an accuracy of 96.87\%. The rest of our models performed moderately with accuracies between 61.70\% and 71.66\% (i.e. LDA, Logistic, QDA, SVM). To combine each classifier's prediction we used an unweighted majority vote, which has been shown to increase performance [[10]](#references).
+We set out to create a model that was able to accurately predict forest cover type from 54 cartographic variables describing a plethora of 30x30 meter regions of the Roosevelt National Forest. To accomplish this, we created an ensemble classifier consisting of several linear and non-linear classifiers. $$K$$NN was our strongest classifier with an accuracy of 96.87%. The rest of our models performed moderately with accuracies between 61.70% and 71.66% (i.e. LDA, Logistic, QDA, SVM). To combine each classifier's prediction we used an unweighted majority vote, which has been shown to increase performance [[10]](#references).
 
-Our ensemble classification performed poorly when compared to $$K$$NN with an accuracy of 75.35\%; however, it did perform better than each of our moderate classifiers. It also performed better than all neural network used by Blackard and Dean, which achieved an accuracy of \~71\% [[2]](#references).
+Our ensemble classification performed poorly when compared to $$K$$NN with an accuracy of 75.35%; however, it did perform better than each of our moderate classifiers. It also performed better than all neural network used by Blackard and Dean, which achieved an accuracy of \~71% [[2]](#references).
 
 # Replication
 
