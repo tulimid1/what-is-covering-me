@@ -78,7 +78,7 @@ Current methods for classifying forest cover types involve direct observations v
 
 ![](figures/BD99_location_map.png) Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
-![](figures/Forest_Covers_bbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references). A condensed list of predictors can be seen in bottom right.
+![](figures/Forest_Covers_bbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references), [[13]](#references), [[7]](#references), [[15]](#references), [[3]](#references), [[1]](#references), [[5]](#references). A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
 
@@ -105,40 +105,13 @@ Overall, the authors were able to create a model that predicted the forest cover
 
 The authors pose many reasons the neural network outperformed the discriminant analyses. One potential reason for this discrepancy could have been due to the underlying assumptions of the discriminant analysis models. Linear discriminant analysis models each class as a multivariate Gaussian distribution and assumes all classes share a covariance matrix. On the other hand, quadratic discriminant analysis models assume each class is normally distributed and that each class has its own covariance matrix. A neural network has no assumptions about the underlying distributions and therefore will be most flexible in modeling data. The authors state that another reason the discriminant analyses could have performed worse than neural networks was due to the non-linearity of the data. Discriminant analyses perform well with linear data while neural networks are flexible in regards to the linearity of the data. On the other hand, one area where the discriminant analyses outperformed the neural network was in computational time. The discriminant analyses took only 5 hours to run, while the neural network, once finalized, took 45 hours to finalize. The 45 hour run time of the neural network also did not take into account the time needed for the operator to manually tune all the hyper parameters.
 
-![](figures/BD_fig4_kbg.png){#fig:BB99_comp_models} Figure 3. Comparison of artificial neural network and discriminant analysis classification results. *NN*: neural network, *LDA*: linear discriminant analysis; *QDA* quadratic discriminant analysis. Republished from Blackard and Dean (1999) [[2]](#references).
+![](figures/BD_fig4_kbg.png) Figure 3. Comparison of artificial neural network and discriminant analysis classification results. *NN*: neural network, *LDA*: linear discriminant analysis; *QDA* quadratic discriminant analysis. Republished from Blackard and Dean (1999) [[2]](#references).
 
 ### Oza and Russell (2001) [[8]](#references)
 
-In 2001, Oza and Russell utilized the forest cover type data set as one
-of many large data sets to validate alternative versions of traditional
-ensemble learning algorithms [[8]](#references).
-Ensemble learning utilize multiple machine learning techniques that are
-combined to achieve an improved predictive performance. Many of these
-algorithms involve the use of weights, which mediate the occurrence of
-observations during resampling.
+In 2001, Oza and Russell utilized the forest cover type data set as one of many large data sets to validate alternative versions of traditional ensemble learning algorithms [[8]](#references). Ensemble learning utilize multiple machine learning techniques that are combined to achieve an improved predictive performance. Many of these algorithms involve the use of weights, which mediate the occurrence of observations during resampling.
 
-One example of weighted ensemble learning is bagging, which
-traditionally trains several models, each with randomly re-sampled
-subsets of data, and combines their predictions. The authors created an
-online version of bagging that assigns weights to each sample to mediate
-occurrences during re-sampling [[8]](#references).
-Another example of weighted ensemble learning is boosting, which
-sequentially retrains a single model based on the errors of previous
-iterations. While traditional boosting updates weights based on
-performance on the entire training data set, online boosting updates
-weights using only samples the model has seen before
-[[8]](#references). For example, if the first
-iteration only uses 100 unique samples, the testing set for this model
-will only be those 100 instances. If the next iteration of model
-training observes 50 more unique samples, then the testing set for this
-model will be updated to include those 50 new instances. The authors
-report that early iterations had relatively poor performance; however,
-as the iterations increased, so did the model's accuracy. The authors
-also note that accuracy was similar between traditional and online
-versions of both ensemble techniques despite the online versions having
-significantly shorter computation times. The authors report that
-ensemble learning techniques were effective when applied to the forest
-cover type data set, but unfortunately no model scores were reported.
+One example of weighted ensemble learning is bagging, which traditionally trains several models, each with randomly re-sampled subsets of data, and combines their predictions. The authors created an online version of bagging that assigns weights to each sample to mediate occurrences during re-sampling [[8]](#references). Another example of weighted ensemble learning is boosting, which sequentially retrains a single model based on the errors of previous iterations. While traditional boosting updates weights based on performance on the entire training data set, online boosting updates weights using only samples the model has seen before [[8]](#references). For example, if the first iteration only uses 100 unique samples, the testing set for this model will only be those 100 instances. If the next iteration of model training observes 50 more unique samples, then the testing set for this model will be updated to include those 50 new instances. The authors report that early iterations had relatively poor performance; however, as the iterations increased, so did the model's accuracy. The authors also note that accuracy was similar between traditional and online versions of both ensemble techniques despite the online versions having significantly shorter computation times. The authors report that ensemble learning techniques were effective when applied to the forest cover type data set, but unfortunately no model scores were reported.
 
 # Algorithms
 
