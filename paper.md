@@ -130,15 +130,15 @@ $$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$
 Figure 4. $$K$$NN classifier on simulated data. Each class is represented by a single color. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ````
-Algorithm 1. $$K$$-Nearest Neighbors
-**Input:** $X_{train}$, $y_{train}$, $X_{test}$, $$K$$
-**Output:** Predictions
-**begin**
-**for** i, x in enumerate($X_{test}$)
-    distances = calculate distance between $x$ and $X_{train}$ 
-    neighbors = $k$ instances of $X_{train}$ with smallest distances
-    class\_weights = calculate class ($y_{train}$) weights ($\frac{1}{distance}$) for neighbors 
-    Predictions[i] = class with highest class\_weights
+Algorithm 1. K-Nearest Neighbors
+Input: X_train, y_train, X_test, k
+Output: Predictions
+begin
+for i, x in enumerate(X_test)
+    distances = calculate distance between x and X_train 
+    neighbors = k instances of X_train with smallest distances
+    class_weights = calculate class (y_train) weights (1/distance) for neighbors 
+    Predictions[i] = class with highest class_weights
 ````
 
 ## Support Vector Machine (SVM)
