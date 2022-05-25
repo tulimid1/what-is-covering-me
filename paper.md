@@ -402,27 +402,11 @@ Figure 18. QDA confusion matrix. The predicted class is on the x-axis and the ac
 
 ## Logistic Regression
 
-We used 10 fold cross-validation to determine the best parameters for a
-logistic regression model. We optimized over penalty (l1, l2, elastic
-net, none), regularization parameter, intercept term (True or False),
-and l1 ratio. We found that a logistic regression model with *l2*
-penalty, regularization parameter = *0.7525*, *no* intercept term, and
-*no* l1 ratio performed the best. Therefore, we created a logistic
-regression model using these parameters and achieved an overall accuracy
-of 71.66% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). We found that our logistic regression
-model classified Lodgepole and Ponderosa Pines well, but was not able to
-classify the other cover types as well. The logistic regression model
-confused Spruce/Fir and Aspen for Lodgepole Pine. It also confused
-Cottonwood/Willow for Ponderosa Pine. Douglas-fir was confused for both
-Pines (Lodgepole and Ponderosa), while Krummholz was confused for
-Spruce/Fir.
+We used 10 fold cross-validation to determine the best parameters for a logistic regression model. We optimized over penalty (l1, l2, elastic net, none), regularization parameter, intercept term (True or False), and l1 ratio. We found that a logistic regression model with *l2* penalty, regularization parameter = *0.7525*, *no* intercept term, and *no* l1 ratio performed the best. Therefore, we created a logistic regression model using these parameters and achieved an overall accuracy of 71.66% (Figure 10). We found that our logistic regression model classified Lodgepole and Ponderosa Pines well, but was not able to classify the other cover types as well. The logistic regression model confused Spruce/Fir and Aspen for Lodgepole Pine. It also confused Cottonwood/Willow for Ponderosa Pine. Douglas-fir was confused for both Pines (Lodgepole and Ponderosa), while Krummholz was confused for Spruce/Fir.
 
-![Logistic Regression confusion matrix. The predicted class is on the
-x-axis and the actual class is on the y-axis. The color (and value) of
-the elements are calculated as found in Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/Logistic Regression_confusion_kbg.png){#fig:LR_confuse}
+![](figures/Logistic Regression_confusion_kbg.png)
+
+Figure 19. Logistic Regression confusion matrix. The predicted class is on the x-axis and the actual class is on the y-axis. The color (and value) of the elements are calculated as found in Table 2.
 
 ## Ensemble
 
