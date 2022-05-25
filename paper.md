@@ -255,11 +255,9 @@ for i,x in enumerate(X_test)
 
 In order to assess how well our models performed we used multiple performance metrics. Our first metric of performance was accuracy (Equation 1 [[9]](#references)). Accuracy provided an overall idea of the model's performance. However, in multi-class classification this can be a harsh way to measure true accuracy [[9]](#references). Additionally, we used a confusion matrix to better understand the accuracy of within and between class predictions (Table 2, Equation 2). A perfect multi-class classifier would have a confusion matrix with 100% accuracy on the diagonal and 0% accuracy everywhere else. On the other hand, a completely inaccurate multi-class classifier would have a confusion matrix with 0% on the diagonal and various percentages everywhere else.
 
-Equation 1. $$accuracy(y,\hat{y}) = \frac{1}{n_{samples}} \Sigma_{i=0}^{n_{samples}-1} 1(\hat{y_i} = y_i)
-    \label{eq:avg_accuracy}$$
+Equation 1. $$ accuracy(y,\hat{y}) = \frac{1}{n_{samples}} \Sigma_{i=0}^{n_{samples}-1} 1(\hat{y_i} = y_i) $$
 
-Equation 2. $$confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
-    \label{eq:confusion_element}$$
+Equation 2. $$ confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)} $$
 
 
 +-------+-------+-------+-------+-------+-------+-------+-------+-------+
