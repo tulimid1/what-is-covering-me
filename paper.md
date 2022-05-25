@@ -261,8 +261,7 @@ Equation 1. $$accuracy(y,\hat{y}) = \frac{1}{n_{samples}} \Sigma_{i=0}^{n_{sampl
 Equation 2. $$confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
     \label{eq:confusion_element}$$
 
-::: center
-::: {#table:classification_confusion}
+
 +-------+-------+-------+-------+-------+-------+-------+-------+-------+
 |       |       | Pred  |       |       |       |       |       |       |
 |       |       | icted |       |       |       |       |       |       |
@@ -347,26 +346,11 @@ Equation 2. $$confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
 |       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ |
 +-------+-------+-------+-------+-------+-------+-------+-------+-------+
 
-: Confusion matrix element calculations. Along the diagonal there are
-the correct classification and elsewhere are the incorrect
-classifications. Abbreviations: SF: Spruce/Fir, LP: Lodgepole Pine, PP:
-Ponderosa Pine, CW: Cottonwood/Willow, A: Aspen, Df: Douglas-fir, K:
-Krummholz, $X_A$: Actual X class, $X_P$: Predicted X class. The
-calculation for an element can be seen in Equation
-[\[eq:confusion_element\]](#eq:confusion_element){reference-type="ref"
-reference="eq:confusion_element"}
-:::
+Table 2. Confusion matrix element calculations. Along the diagonal there are the correct classification and elsewhere are the incorrect classifications. Abbreviations: SF: Spruce/Fir, LP: Lodgepole Pine, PP: Ponderosa Pine, CW: Cottonwood/Willow, A: Aspen, Df: Douglas-fir, K: Krummholz, $X_A$: Actual X class, $X_P$: Predicted X class. The calculation for an element can be seen in Equation 2.
 
-. []{#table:classification_confusion
-label="table:classification_confusion"}
-:::
+![](figures/all_models_scores_kbg.png)
 
-![Model scores on test set. Scores were calculated according to Equation
-[\[eq:avg_accuracy\]](#eq:avg_accuracy){reference-type="ref"
-reference="eq:avg_accuracy"}. A threshold of 80% was used to determine
-if a model was considered a strong (i.e., $$K$$NN) or moderate performer
-(i.e., LDA, Logistic Regression, QDA, SVM,
-Ensemble)](figures/all_models_scores_kbg.png){#fig:all_acc_bar}
+Figure 10. Model scores on test set. Scores were calculated according to Equation 1. A threshold of 80% was used to determine if a model was considered a strong (i.e., $$K$$NN) or moderate performer (i.e., LDA, Logistic Regression, QDA, SVM, Ensemble)
 
 ## $$K$$-Nearest Neighbors
 
