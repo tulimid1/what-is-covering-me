@@ -70,43 +70,32 @@ Table of Contents
 
 # Introduction
 
-National parks are some of the most beautiful places on this little blueplanet we call home. They are some of the only remaining \"untouched\"regions of Earth that allow nature to flourish. These parks, whileuntouched, are not ignored. In fact, they are some of the most studiedregions around the world.
+National parks are some of the most beautiful places on this little blue planet we call home. They are some of the only remaining \"untouched\" regions of Earth that allow nature to flourish. These parks, while untouched, are not ignored. In fact, they are some of the most studied regions around the world.
 
-The University of California Irvine's machine learning repositorycontains a large data set on the Roosevelt National Forest in northernColorado. This data set -- known as the forest cover type data set -- iscomprised of cartographic information from four parks within theRoosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache laPoudre) (Figure [1]). The data set contains a variety of continuousand categorical features obtained from geological surveys; includingelevation, soil type, slope, hill shade at various times of day, anddistance to the nearest body of water. Along with these features, eachinstance has a forest cover type classification, which refers to thepredominant tree species in a given 30x30 meter region (Figure[2]).
+The University of California Irvine's machine learning repository contains a large data set on the Roosevelt National Forest in northern Colorado. This data set -- known as the forest cover type data set -- is comprised of cartographic information from four parks within the Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la Poudre) (Figure [1]). The data set contains a variety of continuous and categorical features obtained from geological surveys; including elevation, soil type, slope, hill shade at various times of day, and distance to the nearest body of water. Along with these features, each instance has a forest cover type classification, which refers to the predominant tree species in a given 30x30 meter region (Figure[2]).
 
-Current methods for classifying forest cover types involve directobservations via field personnel or estimation using remotely senseddata [[2]](#references). These approaches areoften time-consuming and costly; however, the use of predictive modelscan streamline this process [[2]](#references). Wedecided to examine the accuracies of several machine learning algorithmsand an ensemble learning method to predict forest cover types. Usingthese methods, our goal was to achieve the highest predictive poweracross all classes.
+Current methods for classifying forest cover types involve direct observations via field personnel or estimation using remotely sensed data [[2]](#references). These approaches are often time-consuming and costly; however, the use of predictive models can streamline this process [[2]](#references). We decided to examine the accuracies of several machine learning algorithms and an ensemble learning method to predict forest cover types. Using these methods, our goal was to achieve the highest predictive poweracross all classes.
 
 ![](figures/BD99_location_map.png) Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
-![](figures/Forest_Covers_kbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012instances, 54 predictors, and 7 classes. Examples of the seven covertype classifications can be seen in the pictures[[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references). A condensed list of predictors can be seen in bottom right.
+![](figures/Forest_Covers_wbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references). A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
 
 ### Blackard and Dean (1999) [[2]](#references)
 
-Blackard and Dean were the first to publish on this data set
-[[2]](#references). These authors compared the
-performance of a neural network, a linear discriminant analysis model,
-and a quadratic discriminant analysis model on multiple subsets of the
-data set. The authors split the data set into six subsets (Table
-[[1]](#tab:BD99_subsetTable){reference-type="ref"
-reference="tab:BD99_subsetTable"}). These subsets were chosen because
-the authors had *a priori* ideas about which predictors would hold large
-predictive power and wished to test these hypotheses.
+Blackard and Dean were the first to publish on this data set [[2]](#references). These authors compared the performance of a neural network, a linear discriminant analysis model, and a quadratic discriminant analysis model on multiple subsets of the data set. The authors split the data set into six subsets (Table [1]). These subsets were chosen because the authors had *a priori* ideas about which predictors would hold large predictive power and wished to test these hypotheses.
 
-::: {#tab:BD99_subsetTable}
-   Number of independent variables                        Description of variables
-  --------------------------------- --------------------------------------------------------------------
-                  9                   Same as '10' but excluding distance-to-wildfire-ignition-points
-                 10                                   Ten quantitative variables only
-                 20                   Same as '21' but excluding distance-to-wildfire-ignition-points
-                 21                        Ten quantitative variables + 11 generalized soil types
-                 53                   Same as '54' but excluding distance-to-wildfire-ignition-points
-                 54                  Ten quantitative variables + four wilderness areas + 40 soil types
+| Number of independent variables   |                      Description of variables                        |
+| --------------------------------- | -------------------------------------------------------------------- |
+|                 9                 |   Same as '10' but excluding distance-to-wildfire-ignition-points    |
+|                 10                |                    Ten quantitative variables only                   |
+|                 20                |    Same as '21' but excluding distance-to-wildfire-ignition-points   |
+|                 21                |         Ten quantitative variables + 11 generalized soil types       |
+|                 53                |    Same as '54' but excluding distance-to-wildfire-ignition-points   |
+|                 54                |   Ten quantitative variables + four wilderness areas + 40 soil types |
 
-  : Number of input variable subsets examined. Taken from Blackard and
-  Dean (1999) [[2]](#references).
-:::
+Table 1. Number of input variable subsets examined. Taken from Blackard and Dean (1999) [[2]](#references).
 
 To train the best neural network, the authors did multiple iterations of
 editing model parameters [[2]](#references). The
