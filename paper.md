@@ -81,46 +81,46 @@ contains a large data set on the Roosevelt National Forest in northern
 Colorado. This data set -- known as the forest cover type data set -- is
 comprised of cartographic information from four parks within the
 Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la
-Poudre) (Figure [1](#fig:loc_map){reference-type="ref"
+Poudre) (Figure [[1]](#fig:loc_map){reference-type="ref"
 reference="fig:loc_map"}). The data set contains a variety of continuous
 and categorical features obtained from geological surveys; including
 elevation, soil type, slope, hill shade at various times of day, and
 distance to the nearest body of water. Along with these features, each
 instance has a forest cover type classification, which refers to the
 predominant tree species in a given 30x30 meter region (Figure
-[2](#fig:forest_cover_types){reference-type="ref"
+[[2]](#fig:forest_cover_types){reference-type="ref"
 reference="fig:forest_cover_types"}).
 
 Current methods for classifying forest cover types involve direct
 observations via field personnel or estimation using remotely sensed
-data [2](#references). These approaches are
+data [[2]](#references). These approaches are
 often time-consuming and costly; however, the use of predictive models
-can streamline this process [2](#references). We
+can streamline this process [[2]](#references). We
 decided to examine the accuracies of several machine learning algorithms
 and an ensemble learning method to predict forest cover types. Using
 these methods, our goal was to achieve the highest predictive power
 across all classes.
 
 ![](figures/BD99_location_map.png "Study area location map. Taken from Blackard and Dean (1999)
-[2](#references)."){#fig:loc_map}
+[[2]](#references)."){#fig:loc_map}
 
 ![Forest cover types and predictors. The data set contains 581,012
 instances, 54 predictors, and 7 classes. Examples of the seven cover
 type classifications can be seen in the pictures
-[14](#references),[13](#references),[7](#references),[15](#references),[3](#references),[1](#references),[5](#references).
+[14](#references),[13](#references),[7](#references),[15](#references),[3](#references),[[1]](#references),[5](#references).
 A condensed list of predictors can be seen in bottom right.
 ](figures/Forest_Covers_kbg.png){#fig:forest_cover_types}
 
 ## Previous literature using forest cover type data set
 
-### Blackard and Dean (1999) [2](#references)
+### Blackard and Dean (1999) [[2]](#references)
 
 Blackard and Dean were the first to publish on this data set
-[2](#references). These authors compared the
+[[2]](#references). These authors compared the
 performance of a neural network, a linear discriminant analysis model,
 and a quadratic discriminant analysis model on multiple subsets of the
 data set. The authors split the data set into six subsets (Table
-[1](#tab:BD99_subsetTable){reference-type="ref"
+[[1]](#tab:BD99_subsetTable){reference-type="ref"
 reference="tab:BD99_subsetTable"}). These subsets were chosen because
 the authors had *a priori* ideas about which predictors would hold large
 predictive power and wished to test these hypotheses.
@@ -136,11 +136,11 @@ predictive power and wished to test these hypotheses.
                  54                  Ten quantitative variables + four wilderness areas + 40 soil types
 
   : Number of input variable subsets examined. Taken from Blackard and
-  Dean (1999) [2](#references).
+  Dean (1999) [[2]](#references).
 :::
 
 To train the best neural network, the authors did multiple iterations of
-editing model parameters [2](#references). The
+editing model parameters [[2]](#references). The
 neural network was initialized and kept to one input layer, one hidden
 layer, and one output layer. These layers were dense with no dropouts.
 The authors systematically changed the number of nodes in the hidden
@@ -163,7 +163,7 @@ reference="fig:BB99_comp_models"}).
 
 The authors also implemented both linear and quadratic discriminant
 analyses, which required less parameter tuning than neural networks, but
-at the cost of flexibility [2](#references). The
+at the cost of flexibility [[2]](#references). The
 quadratic discriminant analysis model was able to make predictions on
 subsets that did not contain categorical features and became unstable
 upon their addition. Of the subsets of data tested, the linear
@@ -210,7 +210,7 @@ all the hyper parameters.
 classification results. *NN*: neural network, *LDA*: linear discriminant
 analysis; *QDA* quadratic discriminant analysis. Republished from
 Blackard and Dean (1999)
-[2](#references).](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
+[[2]](#references).](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
 
 ### Oza and Russell (2001) [8](#references)
 
@@ -443,7 +443,7 @@ multi-class classification this can be a harsh way to measure true
 accuracy [9](#references). Additionally, we used a
 confusion matrix to better understand the accuracy of within and between
 class predictions (Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}, Equation
 [\[eq:confusion_element\]](#eq:confusion_element){reference-type="ref"
 reference="eq:confusion_element"}). A perfect multi-class classifier
@@ -590,7 +590,7 @@ by the relative accuracy of the predicted and actual combination to the
 overall number of instances for the actual class (Equation
 [\[eq:confusion_element\]](#eq:confusion_element){reference-type="ref"
 reference="eq:confusion_element"}, Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}).](figures/KNN_confusion_kbg.png){#fig:KNN_confuse}
 
 ## Support Vector Machine
@@ -617,7 +617,7 @@ misclassifications](figures/SVM_params_kbg.png){#fig:SVM_params}
 ![SVM confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
 calculated as found in Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}.](figures/SVM_confusion_kbg.png){#fig:SVM_confuse}
 
 ## Linear Discriminant Analysis
@@ -644,7 +644,7 @@ eigenvalue decomposition
 ![LDA confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
 calculated as found in Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}.](figures/LDA_confusion_kbg.png){#fig:LDA_confuse}
 
 ## Quadratic Discriminant Analysis
@@ -670,7 +670,7 @@ because of no binning.](figures/QDA_params_kbg.png){#fig:QDA_params}
 ![QDA confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
 calculated as found in Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}.](figures/QDA_confusion_kbg.png){#fig:QDA_confuse}
 
 ## Logistic Regression
@@ -694,7 +694,7 @@ Spruce/Fir.
 ![Logistic Regression confusion matrix. The predicted class is on the
 x-axis and the actual class is on the y-axis. The color (and value) of
 the elements are calculated as found in Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}.](figures/Logistic Regression_confusion_kbg.png){#fig:LR_confuse}
 
 ## Ensemble
@@ -711,7 +711,7 @@ misclssifying Aspen as Lodgepole Pine.
 ![Ensemble model confusion matrix. The predicted class is on the x-axis
 and the actual class is on the y-axis. The color (and value) of the
 elements are calculated as found in Table
-[2](#table:classification_confusion){reference-type="ref"
+[[2]](#table:classification_confusion){reference-type="ref"
 reference="table:classification_confusion"}.](figures/Ensemble_confusion_kbg.png){#fig:Ensemble_confuse}
 
 # Discussion
@@ -838,7 +838,7 @@ Our ensemble classification performed poorly when compared to $K$NN with
 an accuracy of 75.35%; however, it did perform better than each of our
 moderate classifiers. It also performed better than all neural network
 used by Blackard and Dean, which achieved an accuracy of \~71%
-[2](#references).
+[[2]](#references).
 
 # Replication
 
@@ -857,9 +857,9 @@ everything publicly available for others to learn.
 
 # References
 
-[1] ArborDayFoundation. “Ponderosa Pine [Photograph]”. In: ().
+[[1]] ArborDayFoundation. “Ponderosa Pine [Photograph]”. In: ().
 
-[2] Jock A Blackard and Denis J Dean. “Comparative accuracies of artificial neural networks
+[[2]] Jock A Blackard and Denis J Dean. “Comparative accuracies of artificial neural networks
 and discriminant analysis in predicting forest cover types from cartographic variables”. In:
 Computers and electronics in agriculture 24.3 (1999), pp. 131–151.
 
