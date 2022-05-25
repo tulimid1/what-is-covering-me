@@ -260,58 +260,55 @@ Equation 1. $$ accuracy(y,\hat{y}) = \frac{1}{n_{samples}} \Sigma_{i=0}^{n_{samp
 Equation 2. $$ confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)} $$
 
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       |       | Pred  |       |       |       |       |       |       |
-|       |       | icted |       |       |       |       |       |       |
-|       |       | Class |       |       |       |       |       |       |
+|       |       | Predicted Class                                       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       |       | $     | $     | $     | $     | $A_p$ | $     | $K_p$ |
-|       |       | SF_p$ | LP_p$ | PP_p$ | CW_p$ |       | Df_p$ |       |
+|       |       | $$SF_p$$ | $$LP_p$$ | $$PP_p$$  | $$CW_p$$  | $$A_p$$ | $$Df_p$$  | $$K_p$$ |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $     | $     | $     | $     | $     | $\fra | $     | $\fra |
-|       | SF_A$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
+|       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
+|       | SF_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
 |    A  |       | {\Sig | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
 | ctual |       | ma 1( | ma 1( | ma 1( | ma 1( | (SF_A | ma 1( | (SF_A |
 | Class |       | SF_A  | SF_A  | SF_A  | SF_A  |  = A_ | SF_A  |  = K_ |
 |       |       | = SF_ | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
 |       |       | p)}{\ | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
 |       |       | Sigma | Sigma | Sigma | Sigma |  1(SF | Sigma |  1(SF |
-|       |       |  1(SF |  1(SF |  1(SF |  1(SF | _A)}$ |  1(SF | _A)}$ |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ |       | _A)}$ |       |
+|       |       |  1(SF |  1(SF |  1(SF |  1(SF | _A)}$$ |  1(SF | _A)}$$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $     | $     | $     | $     | $     | $\fra | $     | $\fra |
-|       | LP_A$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
+|       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
+|       | LP_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
 |       |       | {\Sig | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
 |       |       | ma 1( | ma 1( | ma 1( | ma 1( | (LP_A | ma 1( | (LP_A |
 |       |       | LP_A  | LP_A  | LP_A  | LP_A  |  = A_ | LP_A  |  = K_ |
 |       |       | = SF_ | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
 |       |       | p)}{\ | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
 |       |       | Sigma | Sigma | Sigma | Sigma |  1(LP | Sigma |  1(LP |
-|       |       |  1(LP |  1(LP |  1(LP |  1(LP | _A)}$ |  1(LP | _A)}$ |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ |       | _A)}$ |       |
+|       |       |  1(LP |  1(LP |  1(LP |  1(LP | _A)}$$ |  1(LP | _A)}$$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $     | $     | $     | $     | $     | $\fra | $     | $\fra |
-|       | PP_A$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
+|       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
+|       | PP_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
 |       |       | {\Sig | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
 |       |       | ma 1( | ma 1( | ma 1( | ma 1( | (PP_A | ma 1( | (PP_A |
 |       |       | PP_A  | PP_A  | PP_A  | PP_A  |  = A_ | PP_A  |  = K_ |
 |       |       | = SF_ | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
 |       |       | p)}{\ | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
 |       |       | Sigma | Sigma | Sigma | Sigma |  1(PP | Sigma |  1(PP |
-|       |       |  1(PP |  1(PP |  1(PP |  1(PP | _A)}$ |  1(PP | _A)}$ |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ |       | _A)}$ |       |
+|       |       |  1(PP |  1(PP |  1(PP |  1(PP | _A)}$$ |  1(PP | _A)}$$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $     | $     | $     | $     | $     | $\fra | $     | $\fra |
-|       | CW_A$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
+|       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
+|       | CW_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
 |       |       | {\Sig | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
 |       |       | ma 1( | ma 1( | ma 1( | ma 1( | (CW_A | ma 1( | (CW_A |
 |       |       | CW_A  | CW_A  | CW_A  | CW_A  |  = A_ | CW_A  |  = K_ |
 |       |       | = SF_ | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
 |       |       | p)}{\ | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
 |       |       | Sigma | Sigma | Sigma | Sigma |  1(CW | Sigma |  1(CW |
-|       |       |  1(CW |  1(CW |  1(CW |  1(CW | _A)}$ |  1(CW | _A)}$ |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ |       | _A)}$ |       |
+|       |       |  1(CW |  1(CW |  1(CW |  1(CW | _A)}$$ |  1(CW | _A)}$$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $A_A$ | $\fr  | $\fr  | $\fr  | $\fr  | $\f   | $\fr  | $\f   |
+|       | $$A_A$$ | $$\fr  | $$\fr  | $$\fr  | $$\fr  | $$\f   | $$\fr  | $$\f   |
 |       |       | ac{\S | ac{\S | ac{\S | ac{\S | rac{\ | ac{\S | rac{\ |
 |       |       | igma  | igma  | igma  | igma  | Sigma | igma  | Sigma |
 |       |       | 1(A_A | 1(A_A | 1(A_A | 1(A_A |  1(A_ | 1(A_A |  1(A_ |
@@ -319,20 +316,20 @@ Equation 2. $$ confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
 |       |       | _p)}{ | _p)}{ | _p)}{ | _p)}{ | _p)}{ | _p)}{ | _p)}{ |
 |       |       | \Sigm | \Sigm | \Sigm | \Sigm | \Sigm | \Sigm | \Sigm |
 |       |       | a 1(A | a 1(A | a 1(A | a 1(A | a 1(A | a 1(A | a 1(A |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $     | $     | $     | $     | $     | $\fra | $     | $\fra |
-|       | Df_A$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
+|       | $$     | $$     | $$     | $$     | $$     | $$\fra | $$     | $$\fra |
+|       | Df_A$$ | \frac | \frac | \frac | \frac | c{\Si | \frac | c{\Si |
 |       |       | {\Sig | {\Sig | {\Sig | {\Sig | gma 1 | {\Sig | gma 1 |
 |       |       | ma 1( | ma 1( | ma 1( | ma 1( | (Df_A | ma 1( | (Df_A |
 |       |       | Df_A  | Df_A  | Df_A  | Df_A  |  = A_ | Df_A  |  = K_ |
 |       |       | = SF_ | = LP_ | = PP_ | = CW_ | p)}{\ | = Df_ | p)}{\ |
 |       |       | p)}{\ | p)}{\ | p)}{\ | p)}{\ | Sigma | p)}{\ | Sigma |
 |       |       | Sigma | Sigma | Sigma | Sigma |  1(Df | Sigma |  1(Df |
-|       |       |  1(Df |  1(Df |  1(Df |  1(Df | _A)}$ |  1(Df | _A)}$ |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ |       | _A)}$ |       |
+|       |       |  1(Df |  1(Df |  1(Df |  1(Df | _A)}$$ |  1(Df | _A)}$$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |       | _A)}$$ |       |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
-|       | $K_A$ | $\fr  | $\fr  | $\fr  | $\fr  | $\f   | $\fr  | $\f   |
+|       | $$K_A$$ | $$\fr  | $$\fr  | $$\fr  | $$\fr  | $$\f   | $$\fr  | $$\f   |
 |       |       | ac{\S | ac{\S | ac{\S | ac{\S | rac{\ | ac{\S | rac{\ |
 |       |       | igma  | igma  | igma  | igma  | Sigma | igma  | Sigma |
 |       |       | 1(K_A | 1(K_A | 1(K_A | 1(K_A |  1(K_ | 1(K_A |  1(K_ |
@@ -340,7 +337,7 @@ Equation 2. $$ confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
 |       |       | _p)}{ | _p)}{ | _p)}{ | _p)}{ | _p)}{ | _p)}{ | _p)}{ |
 |       |       | \Sigm | \Sigm | \Sigm | \Sigm | \Sigm | \Sigm | \Sigm |
 |       |       | a 1(K | a 1(K | a 1(K | a 1(K | a 1(K | a 1(K | a 1(K |
-|       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ |
+|       |       | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ | _A)}$$ |
 |-------|-------|-------|-------|-------|-------|-------|-------|-------|
 
 Table 2. Confusion matrix element calculations. Along the diagonal there are the correct classification and elsewhere are the incorrect classifications. Abbreviations: SF: Spruce/Fir, LP: Lodgepole Pine, PP: Ponderosa Pine, CW: Cottonwood/Willow, A: Aspen, Df: Douglas-fir, K: Krummholz, $$X_A$$: Actual X class, $$X_P$$: Predicted X class. The calculation for an element can be seen in Equation 2.
