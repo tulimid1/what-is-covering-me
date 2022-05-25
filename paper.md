@@ -354,31 +354,15 @@ Figure 10. Model scores on test set. Scores were calculated according to Equatio
 
 ## $$K$$-Nearest Neighbors
 
-We used 10 fold cross-validation to determine the optimal number of
-neighbors and the type of weight for our $$K$$NN model. We found that *5*
-neighbors with a weight based on *distance* produced the best
-performance with an accuracy of 96.87% (Figures
-[[11]](#fig:KNN_params){reference-type="ref" reference="fig:KNN_params"} &
-[[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). $$K$$NN was able to reliably predict a
-majority of the forest cover types; however, the model repeatedly
-confused Cottonwood/Willow with Ponderosa Pine or Douglas-fir (Figure
-[[12]](#fig:KNN_confuse){reference-type="ref"
-reference="fig:KNN_confuse"}).
+We used 10 fold cross-validation to determine the optimal number of neighbors and the type of weight for our $$K$$NN model. We found that *5* neighbors with a weight based on *distance* produced the best performance with an accuracy of 96.87\% (Figures 11 \& 10). $$K$$NN was able to reliably predict a majority of the forest cover types; however, the model repeatedly confused Cottonwood/Willow with Ponderosa Pine or Douglas-fir (Figure 12).
 
-![$$K$$NN parameter space. N neighbors refers the the number of neighbors
-($$K$$) the algorithm used to classify a given observation. The weight
-parameter determines if the model should assign weights when referencing
-each N neighbor.](figures/KNN_params_kbg.png){#fig:KNN_params}
+![](figures/KNN_params_kbg.png)
 
-![$$K$$NN confusion matrix. The predicted class is on the x-axis and the
-actual class is on the y-axis. The color of each element is determined
-by the relative accuracy of the predicted and actual combination to the
-overall number of instances for the actual class (Equation
-[\[eq:confusion_element\]](#eq:confusion_element){reference-type="ref"
-reference="eq:confusion_element"}, Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}).](figures/KNN_confusion_kbg.png){#fig:KNN_confuse}
+Figure 11. $$K$$NN parameter space. N neighbors refers the the number of neighbors ($$K$$) the algorithm used to classify a given observation. The weight parameter determines if the model should assign weights when referencing each N neighbor.
+
+![](figures/KNN_confusion_kbg.png)
+
+Figure 12. $$K$$NN confusion matrix. The predicted class is on the x-axis and the actual class is on the y-axis. The color of each element is determined by the relative accuracy of the predicted and actual combination to the overall number of instances for the actual class (Equation 2, Table 2).
 
 ## Support Vector Machine
 
