@@ -173,7 +173,7 @@ Like all models, LDA will perform poorly if the assumptions are violated. For ex
 
 ![](figures/LDA_Example_kbg.png)
 
-LDA classifier on simulated data. Each class is represented by a single color. Each class's simulated data comes from a unique $\mu$ vector with a shared $\Sigma$ matrix, therefore not violating the LDA assumptions. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+Figure 6. LDA classifier on simulated data. Each class is represented by a single color. Each class's simulated data comes from a unique $\mu$ vector with a shared $\Sigma$ matrix, therefore not violating the LDA assumptions. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ````
 Algorithm 3. Linear Discriminant Analysis 
@@ -191,55 +191,46 @@ for i, x in enumerate(X_test)
 
 ## Quadratic Discriminant Analysis (QDA)
 
-Quadratic discriminant analysis (QDA) is another algorithm for
-classifying data, and is more flexible in how it models data compared to
-LDA. Both LDA and QDA model central tendency the same, with a $\mu$
-vector for each class, but model within and between dispersion
-($\Sigma$) differently. Whereas LDA models $\Sigma$ for all classes
-together, QDA will model $\Sigma$ for each class separately (Algorithm
-[\[algo:QDA\]](#algo:QDA){reference-type="ref" reference="algo:QDA"}).
-This small difference will allow this algorithm more flexibility around
-classes having different relationships between and within predictors
-(Figure [[7]](#fig:QDA_Hastie){reference-type="ref"
-reference="fig:QDA_Hastie"}). However, there must be enough data in each
-class to allow reasonable estimation of within and between dispersion.
-If not, QDA will suffer and LDA may be the stronger model.
+Quadratic discriminant analysis (QDA) is another algorithm for classifying data, and is more flexible in how it models data compared to LDA. Both LDA and QDA model central tendency the same, with a $\mu$ vector for each class, but model within and between dispersion ($\Sigma$) differently. Whereas LDA models $\Sigma$ for all classes together, QDA will model $\Sigma$ for each class separately (Algorithm 4). This small difference will allow this algorithm more flexibility around classes having different relationships between and within predictors (Figure 7). However, there must be enough data in each class to allow reasonable estimation of within and between dispersion. If not, QDA will suffer and LDA may be the stronger model.
 
-![QDA classifier on simulated data. Each class is represented by a
-single color. Each classes simulated data comes from a multivariate
-Gaussian with a unique $\mu$ vector and $\Sigma$ matrix. Shaded regions
-represent class prediction in the area. Inspiration from Hastie et al. -
-*Elements of Statistical Learning*
-[[6]](#references).](figures/QDA_Example_kbg.png){#fig:QDA_Hastie}
+![](figures/QDA_Example_kbg.png)
 
-::: algorithm
-**Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
-Let $Classes$ be the unique classes in $y_{train}$
-:::
+Figure 7. QDA classifier on simulated data. Each class is represented by a single color. Each classes simulated data comes from a multivariate Gaussian with a unique $\mu$ vector and $\Sigma$ matrix. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+
+````
+Algorithm 4. Quadratic Discriminant Analysis 
+Input: X_train, y_train, X_test
+Output: Predictions 
+Let Classes be the unique numeric classes in y_train 
+for class in Classes
+    MU[class,:] = average of all predictors for instances with class class in X_train
+    COV[:,:,class] = covariance matrix of instances with class $class$ in X_train
+for i, x in enumerate(X_test)
+    for class in Classes
+        probability[class] = evaluate a multivariate Gaussian at x with parameters mu = MU[class,:] and Sigma = COV[:,:,class]
+    Predictions[i] = argmax[probability]
+````
 
 ## Logistic Regression
 
-Logistic regression is a simple, yet effective, machine learning model
-(Figure [[8]](#fig:LR_Hastie){reference-type="ref"
-reference="fig:LR_Hastie"}). Whereas linear regression predicts
-continuous values along a line, logistic regression predicts continuous
-values along a sigmoid curve (such as a logistic function) (Algorithm
-[\[algo:LR\]](#algo:LR){reference-type="ref" reference="algo:LR"}).
-Prediction along a sigmoid curve allows for better classification than
-along a line because the sigmoid function has more values at 0 and 1.
-Therefore, for classification problems, logistic regression is commonly
-preferred.
+Logistic regression is a simple, yet effective, machine learning model (Figure 8). Whereas linear regression predicts continuous values along a line, logistic regression predicts continuous values along a sigmoid curve (such as a logistic function) (Algorithm 5). Prediction along a sigmoid curve allows for better classification than along a line because the sigmoid function has more values at 0 and 1. Therefore, for classification problems, logistic regression is commonly preferred.
 
-![Logistic regression classifier example. Each class is represented by a
-single color. Shaded regions represent class prediction in the area.
-Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[[6]](#references).](figures/LR_Example_kbg.png){#fig:LR_Hastie}
+![](figures/LR_Example_kbg.png)
 
-::: algorithm
-**Input:** $X_{train}$, $X_{test}$ **Output:** Predictions Use an
-optimizer, like Newton's method, to find optimal coefficients ($\beta$)
-for a logistic model based on $X_{train}$.
-:::
+Figure 8. Logistic regression classifier example. Each class is represented by a single color. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+
+````
+Algorithm 5. Logistic Regression 
+Input: X_train, X_test 
+Output: Predictions
+Use an optimizer, like Newton's method, to find optimal coefficients for a logistic model based on X_train 
+for i, x in enumerate(X_test)
+    probability = evaluate x using a logistic function with coefficients 
+    if probability >= 0.5
+        Predictions[i] = 1
+    else if probability < 0.5
+        Predictions[i] = 0
+````
 
 ## Ensemble Learning
 
