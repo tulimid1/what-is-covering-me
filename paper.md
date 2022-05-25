@@ -107,7 +107,7 @@ across all classes.
 ![Forest cover types and predictors. The data set contains 581,012
 instances, 54 predictors, and 7 classes. Examples of the seven cover
 type classifications can be seen in the pictures
-[14](#references),[13](#references),[7](#references),[15](#references),[3](#references),[[1]](#references),[5](#references).
+[[14]](#references),[[13]](#references),[[7]](#references),[[15]](#references),[[3]](#references),[[1]](#references),[[5]](#references).
 A condensed list of predictors can be seen in bottom right.
 ](figures/Forest_Covers_kbg.png){#fig:forest_cover_types}
 
@@ -158,7 +158,7 @@ parameter tuning, a neural network with 54 input nodes, 120 hidden layer
 nodes, 7 output nodes, a learning rate of 0.05, and a momentum rate of
 0.5 was determined to be optimal. This neural network had the highest
 classification accuracy of 70.58% with all 54 predictors (Figure
-[3](#fig:BB99_comp_models){reference-type="ref"
+[[3]](#fig:BB99_comp_models){reference-type="ref"
 reference="fig:BB99_comp_models"}).
 
 The authors also implemented both linear and quadratic discriminant
@@ -169,16 +169,16 @@ subsets that did not contain categorical features and became unstable
 upon their addition. Of the subsets of data tested, the linear
 discriminant analysis model had the highest classification accuracy
 (\~58.38%) with all 54 predictors (Figure
-[3](#fig:BB99_comp_models){reference-type="ref"
+[[3]](#fig:BB99_comp_models){reference-type="ref"
 reference="fig:BB99_comp_models"}). The quadratic discriminant analysis
 model achieved its highest classification accuracy (\~49.15%) with 10
-predictors (Figure [3](#fig:BB99_comp_models){reference-type="ref"
+predictors (Figure [[3]](#fig:BB99_comp_models){reference-type="ref"
 reference="fig:BB99_comp_models"}).
 
 Overall, the authors were able to create a model that predicted the
 forest cover type well. All the models tested were able to perform
 better than chance (14%) (Figure
-[3](#fig:BB99_comp_models){reference-type="ref"
+[[3]](#fig:BB99_comp_models){reference-type="ref"
 reference="fig:BB99_comp_models"}). The neural network achieved the
 highest overall accuracy (\~71%) when the model included all the
 variables. As expected, the neural network showed a steady increase in
@@ -212,11 +212,11 @@ analysis; *QDA* quadratic discriminant analysis. Republished from
 Blackard and Dean (1999)
 [[2]](#references).](figures/BD_fig4_kbg.png){#fig:BB99_comp_models}
 
-### Oza and Russell (2001) [8](#references)
+### Oza and Russell (2001) [[8]](#references)
 
 In 2001, Oza and Russell utilized the forest cover type data set as one
 of many large data sets to validate alternative versions of traditional
-ensemble learning algorithms [8](#references).
+ensemble learning algorithms [[8]](#references).
 Ensemble learning utilize multiple machine learning techniques that are
 combined to achieve an improved predictive performance. Many of these
 algorithms involve the use of weights, which mediate the occurrence of
@@ -226,13 +226,13 @@ One example of weighted ensemble learning is bagging, which
 traditionally trains several models, each with randomly re-sampled
 subsets of data, and combines their predictions. The authors created an
 online version of bagging that assigns weights to each sample to mediate
-occurrences during re-sampling [8](#references).
+occurrences during re-sampling [[8]](#references).
 Another example of weighted ensemble learning is boosting, which
 sequentially retrains a single model based on the errors of previous
 iterations. While traditional boosting updates weights based on
 performance on the entire training data set, online boosting updates
 weights using only samples the model has seen before
-[8](#references). For example, if the first
+[[8]](#references). For example, if the first
 iteration only uses 100 unique samples, the testing set for this model
 will only be those 100 instances. If the next iteration of model
 training observes 50 more unique samples, then the testing set for this
@@ -258,7 +258,7 @@ For example, if $k$ is equal to three, then the algorithm will consider
 the three closest training observations to the test instance and predict
 the classification of the new instance based on a majority vote of the
 three closest training observations (Figure
-[4](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}).
+[[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}).
 Another parameter commonly given to $K$NN is the method for applying
 weights to each neighbor's vote during classification. A common
 technique is to base the weights on the distances between observations,
@@ -271,7 +271,7 @@ reference="algo:KNN"}).
 ![$K$NN classifier on simulated data. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[6](#references).](figures/KNN_Example_kbg.png){#fig:KNN_Hastie}
+[[6]](#references).](figures/KNN_Example_kbg.png){#fig:KNN_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$, $k$ **Output:**
@@ -288,7 +288,7 @@ hyperplane are known as the support vectors and can consist of samples
 both at the edge and within a given class of training data. The
 hyperplane itself acts as a boundary between observations that can then
 be used to classify new instances (Figure
-[5](#fig:SVM_Hastie){reference-type="ref" reference="fig:SVM_Hastie"},
+[[5]](#fig:SVM_Hastie){reference-type="ref" reference="fig:SVM_Hastie"},
 Algorithm [\[algo:SVM\]](#algo:SVM){reference-type="ref"
 reference="algo:SVM"}). One of the strengths of SVM is that it can
 account for some degree of misclassification by establishing a buffer
@@ -301,7 +301,7 @@ goal of more effectively separating the classes.
 ![SVM classifier on simulated data. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[6](#references).](figures/SVM_Example_kbg.png){#fig:SVM_Hastie}
+[[6]](#references).](figures/SVM_Example_kbg.png){#fig:SVM_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $X_{test}$, $C$, $Kernel$ **Output:**
@@ -321,7 +321,7 @@ matrix. Instead, all classes are assumed to share a $\Sigma$ matrix.
 These assumptions can reasonably model data when there is enough to
 obtain an estimate of central tendency, but not enough to get a stable
 estimate of dispersion within predictors and correlation between
-predictors (Figure [6](#fig:LDA_Hastie){reference-type="ref"
+predictors (Figure [[6]](#fig:LDA_Hastie){reference-type="ref"
 reference="fig:LDA_Hastie"}).
 
 Like all models, LDA will perform poorly if the assumptions are
@@ -337,7 +337,7 @@ single color. Each class's simulated data comes from a unique $\mu$
 vector with a shared $\Sigma$ matrix, therefore not violating the LDA
 assumptions. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[6](#references).](figures/LDA_Example_kbg.png){#fig:LDA_Hastie}
+[[6]](#references).](figures/LDA_Example_kbg.png){#fig:LDA_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
@@ -355,7 +355,7 @@ together, QDA will model $\Sigma$ for each class separately (Algorithm
 [\[algo:QDA\]](#algo:QDA){reference-type="ref" reference="algo:QDA"}).
 This small difference will allow this algorithm more flexibility around
 classes having different relationships between and within predictors
-(Figure [7](#fig:QDA_Hastie){reference-type="ref"
+(Figure [[7]](#fig:QDA_Hastie){reference-type="ref"
 reference="fig:QDA_Hastie"}). However, there must be enough data in each
 class to allow reasonable estimation of within and between dispersion.
 If not, QDA will suffer and LDA may be the stronger model.
@@ -365,7 +365,7 @@ single color. Each classes simulated data comes from a multivariate
 Gaussian with a unique $\mu$ vector and $\Sigma$ matrix. Shaded regions
 represent class prediction in the area. Inspiration from Hastie et al. -
 *Elements of Statistical Learning*
-[6](#references).](figures/QDA_Example_kbg.png){#fig:QDA_Hastie}
+[[6]](#references).](figures/QDA_Example_kbg.png){#fig:QDA_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
@@ -375,7 +375,7 @@ Let $Classes$ be the unique classes in $y_{train}$
 ## Logistic Regression
 
 Logistic regression is a simple, yet effective, machine learning model
-(Figure [8](#fig:LR_Hastie){reference-type="ref"
+(Figure [[8]](#fig:LR_Hastie){reference-type="ref"
 reference="fig:LR_Hastie"}). Whereas linear regression predicts
 continuous values along a line, logistic regression predicts continuous
 values along a sigmoid curve (such as a logistic function) (Algorithm
@@ -388,7 +388,7 @@ preferred.
 ![Logistic regression classifier example. Each class is represented by a
 single color. Shaded regions represent class prediction in the area.
 Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[6](#references).](figures/LR_Example_kbg.png){#fig:LR_Hastie}
+[[6]](#references).](figures/LR_Example_kbg.png){#fig:LR_Hastie}
 
 ::: algorithm
 **Input:** $X_{train}$, $X_{test}$ **Output:** Predictions Use an
@@ -410,22 +410,22 @@ assumptions and biases allows algorithms to account for each other's
 weaknesses. If the multiple assumptions and biases of each algorithm
 produce a series of weak learners with poor performances, combining them
 can produce a more stable and accurate prediction
-[10](#references).
+[[10]](#references).
 
 ![Ensemble classifier on simulated data. Each class is represented by a
 single color. The ensemble classifier is made from the previous models
 trained on the simulated data (e.g., $K$NN \[Figure
-[4](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}\],
-SVM \[Figure [5](#fig:SVM_Hastie){reference-type="ref"
+[[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}\],
+SVM \[Figure [[5]](#fig:SVM_Hastie){reference-type="ref"
 reference="fig:SVM_Hastie"}\], LDA \[Figure
-[6](#fig:LDA_Hastie){reference-type="ref" reference="fig:LDA_Hastie"}\],
-QDA \[Figure [7](#fig:QDA_Hastie){reference-type="ref"
+[[6]](#fig:LDA_Hastie){reference-type="ref" reference="fig:LDA_Hastie"}\],
+QDA \[Figure [[7]](#fig:QDA_Hastie){reference-type="ref"
 reference="fig:QDA_Hastie"}\], and Logistic Regression \[Figure
-[8](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}\])
+[[8]](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}\])
 with a majority vote for prediction. Shaded regions represent class
 prediction in the area. Inspiration from Hastie et al. - *Elements of
 Statistical Learning*
-[6](#references).](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
+[[6]](#references).](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
 
 ::: algorithm
 **Input:** $K$NN, SVM, LDA, QDA, Logistic Regression, $X_{test}$
@@ -437,10 +437,10 @@ Statistical Learning*
 In order to assess how well our models performed we used multiple
 performance metrics. Our first metric of performance was accuracy
 (Equation [\[eq:avg_accuracy\]](#eq:avg_accuracy){reference-type="ref"
-reference="eq:avg_accuracy"} [9](#references)). Accuracy
+reference="eq:avg_accuracy"} [[9]](#references)). Accuracy
 provided an overall idea of the model's performance. However, in
 multi-class classification this can be a harsh way to measure true
-accuracy [9](#references). Additionally, we used a
+accuracy [[9]](#references). Additionally, we used a
 confusion matrix to better understand the accuracy of within and between
 class predictions (Table
 [[2]](#table:classification_confusion){reference-type="ref"
@@ -571,12 +571,12 @@ We used 10 fold cross-validation to determine the optimal number of
 neighbors and the type of weight for our $K$NN model. We found that *5*
 neighbors with a weight based on *distance* produced the best
 performance with an accuracy of 96.87% (Figures
-[11](#fig:KNN_params){reference-type="ref" reference="fig:KNN_params"} &
-[10](#fig:all_acc_bar){reference-type="ref"
+[[11]](#fig:KNN_params){reference-type="ref" reference="fig:KNN_params"} &
+[[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}). $K$NN was able to reliably predict a
 majority of the forest cover types; however, the model repeatedly
 confused Cottonwood/Willow with Ponderosa Pine or Douglas-fir (Figure
-[12](#fig:KNN_confuse){reference-type="ref"
+[[12]](#fig:KNN_confuse){reference-type="ref"
 reference="fig:KNN_confuse"}).
 
 ![$K$NN parameter space. N neighbors refers the the number of neighbors
@@ -599,14 +599,14 @@ After using a standard scaler on our predictors, we used 10 fold
 cross-validation to determine the best kernel and regulating parameter
 for the SVM model and found that a model with a *linear* kernel and a
 regulating parameter of *8.684* produced the best performance (Figure
-[13](#fig:SVM_params){reference-type="ref" reference="fig:SVM_params"}).
+[[13]](#fig:SVM_params){reference-type="ref" reference="fig:SVM_params"}).
 Due to time constraints, optimization of these parameters were performed
 on a subset of the training data set. Our SVM model received an overall
-accuracy of 61.70% (Figure [10](#fig:all_acc_bar){reference-type="ref"
+accuracy of 61.70% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}). Upon further examination of the SVM
 confusion matrix, SVM misclassified every instance of Aspen and was only
 able to strongly predict Lodgepole and Ponderosa Pine (Figure
-[14](#fig:SVM_confuse){reference-type="ref"
+[[14]](#fig:SVM_confuse){reference-type="ref"
 reference="fig:SVM_confuse"}).
 
 ![SVM parameter space. Kernel refers to the function used by SVM to
@@ -624,9 +624,9 @@ reference="table:classification_confusion"}.](figures/SVM_confusion_kbg.png){#fi
 
 We used 10 fold cross-validation to determine the best solver for a LDA
 model and found that the *svd* solver performed best (Figure
-[15](#fig:LDA_params){reference-type="ref" reference="fig:LDA_params"}).
+[[15]](#fig:LDA_params){reference-type="ref" reference="fig:LDA_params"}).
 Our LDA model with the *svd* solver achieved an overall accuracy of
-67.77% (Figure [10](#fig:all_acc_bar){reference-type="ref"
+67.77% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}). We found that our LDA model had an easier
 time predicting Spruce/Fir, Lodgepole Pine, and Krummholz than
 predicting Ponderosa Pine, Cottonwood/Willow, Aspen, and Douglas-fir
@@ -639,7 +639,7 @@ to have confuse Douglas-firs for both Ponderosa and Lodgepole Pines.
 ![LDA parameter space. *svd* solver uses singular value decomposition;
 *lsqr* solver uses least squares solution; *eigen* solver uses
 eigenvalue decomposition
-[9](#references).](figures/LDA_params_kbg.png){#fig:LDA_params}
+[[9]](#references).](figures/LDA_params_kbg.png){#fig:LDA_params}
 
 ![LDA confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color (and value) of the elements are
@@ -653,7 +653,7 @@ We used 10 fold cross-validation to determine the optimal parameters for
 a QDA model and found that a regulating parameter of *0.14* performed
 the best (Figure [17](#fig:QDA_params){reference-type="ref"
 reference="fig:QDA_params"}). Our QDA model achieved an overall accuracy
-of 68.82% (Figure [10](#fig:all_acc_bar){reference-type="ref"
+of 68.82% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}). We found that our QDA model had an easier
 time predicting Spruce/Fir, Lodgepole Pine, Ponderosa Pine,
 Cottonwood/Willow than predicting Aspen, Douglas-fir, and Krummholz
@@ -663,7 +663,7 @@ Lodgepole Pines, Douglas-fir for Ponderosa Pines, and Krummholz for
 Spruce/Fir.
 
 ![QDA parameter space. Regulating parameter refers to the regularization
-of per-class covariance [9](#references). Some bars have
+of per-class covariance [[9]](#references). Some bars have
 error bars due to binning of x-values and others do not have error bars
 because of no binning.](figures/QDA_params_kbg.png){#fig:QDA_params}
 
@@ -682,7 +682,7 @@ and l1 ratio. We found that a logistic regression model with *l2*
 penalty, regularization parameter = *0.7525*, *no* intercept term, and
 *no* l1 ratio performed the best. Therefore, we created a logistic
 regression model using these parameters and achieved an overall accuracy
-of 71.66% (Figure [10](#fig:all_acc_bar){reference-type="ref"
+of 71.66% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}). We found that our logistic regression
 model classified Lodgepole and Ponderosa Pines well, but was not able to
 classify the other cover types as well. The logistic regression model
@@ -700,7 +700,7 @@ reference="table:classification_confusion"}.](figures/Logistic Regression_confus
 ## Ensemble
 
 Our ensemble model received an overall accuracy of 75.35% (Figure
-[10](#fig:all_acc_bar){reference-type="ref"
+[[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}). Upon examining how the ensemble
 classified specific forest cover types (Figure
 [20](#fig:Ensemble_confuse){reference-type="ref"
@@ -722,10 +722,10 @@ Logistic regression had the best performance of the moderate
 classifiers. One reason logistic regression may have under performed,
 relative to $K$NN, was because logistic regression creates linear
 boundaries that can lead to multiple misclassifications (Figure
-[8](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}).
+[[8]](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}).
 Logistic regression also assumes there is little to no multicollinearity
 among features, which may occur in this data set
-[11](#references).
+[[11]](#references).
 
 As previously stated, LDA assumes that each class shares the same
 covariance matrix while QDA assumes each class has their own. Since QDA
@@ -738,9 +738,9 @@ SVM had the poorest performance of the models included in our ensemble.
 There are two characteristics of the data that may have impacted SVM's
 accuracy. First, when several classes overlap within a data set, SVM
 will have difficulty separating the classes
-[12](#references). Secondly, SVM tends to perform best when
+[[12]](#references). Secondly, SVM tends to perform best when
 the number of features far exceeds the number of observations
-[4](#references). Both of these issues are
+[[4]](#references). Both of these issues are
 typically mitigated with the use of a kernel that transforms the data
 into a different space. However, we chose to use a linear kernel that
 only performs a simple transformation. Unlike the other models, the
@@ -756,13 +756,13 @@ $K$NN was our strongest model. This may be due to $K$NN not having any
 of the assumptions tied to the moderate performers. Additionally, $K$NN
 has a tendency to perform well when the number of observations is far
 greater than the number of features
-[4](#references). During the training of $K$NN, the
+[[4]](#references). During the training of $K$NN, the
 model stores the training instances that are referenced during testing.
 While a large number of instances may produce high computation times,
 they are necessary to produce an accurate classification of unknown
 observations. Additionally, unlike logistic regression and linear
 discriminate analysis, $K$NN creates non-linear boundaries during
-classification (Figure [4](#fig:KNN_Hastie){reference-type="ref"
+classification (Figure [[4]](#fig:KNN_Hastie){reference-type="ref"
 reference="fig:KNN_Hastie"}).
 
 ## What happened with the ensemble model?
@@ -777,7 +777,7 @@ overall correct classification through majority vote. This scenario
 assumes that each model has a similar performance on the training set.
 Yet, this is not the case for our ensemble. Since a majority of our
 models have a significant amount of misclassifications (Figure
-[10](#fig:all_acc_bar){reference-type="ref"
+[[10]](#fig:all_acc_bar){reference-type="ref"
 reference="fig:all_acc_bar"}), there is an increased likelihood that the
 several moderate performers will have a stronger influence on the
 majority vote than the one strong performer. For example, SVM, LDA, QDA,
@@ -815,7 +815,7 @@ implementing a bagging or boosting method may lead to the best
 predictive performance. This could be achieved in two ways. First, one
 could use boosting on our strong performer to see if one could account
 for the misclassification for Cottonwood/Willow (Figure
-[12](#fig:KNN_confuse){reference-type="ref"
+[[12]](#fig:KNN_confuse){reference-type="ref"
 reference="fig:KNN_confuse"}). Secondly, we could use boosting on our
 moderate performers. This should increase the predictive power by
 minimizing training errors, but at the cost of exponentially increasing
@@ -832,7 +832,7 @@ accuracy of 96.87%. The rest of our models performed moderately with
 accuracies between 61.70% and 71.66% (i.e. LDA, Logistic, QDA, SVM). To
 combine each classifier's prediction we used an unweighted majority
 vote, which has been shown to increase performance
-[10](#references).
+[[10]](#references).
 
 Our ensemble classification performed poorly when compared to $K$NN with
 an accuracy of 75.35%; however, it did perform better than each of our
@@ -857,9 +857,9 @@ everything publicly available for others to learn.
 
 # References
 
-[[1]] ArborDayFoundation. “Ponderosa Pine [Photograph]”. In: ().
+[1] ArborDayFoundation. “Ponderosa Pine [Photograph]”. In: ().
 
-[[2]] Jock A Blackard and Denis J Dean. “Comparative accuracies of artificial neural networks
+[2] Jock A Blackard and Denis J Dean. “Comparative accuracies of artificial neural networks
 and discriminant analysis in predicting forest cover types from cartographic variables”. In:
 Computers and electronics in agriculture 24.3 (1999), pp. 131–151.
 
@@ -892,7 +892,7 @@ model”. In: Asian Journal of Probability and Statistics 5.2 (2019), pp. 1–9.
 [12] Saman Shojae Chaeikar et al. “PFW: polygonal fuzzy weighted—an SVM kernel for the
 classification of overlapping data groups”. In: Electronics 9.4 (2020), p. 615.
 
-[13] StateSymbolsUSA. “Cottonwood | State Symbols USA [Photograph]”. In: (2019).
+[13] StateSymbolsUSA. “Cottonwood \| State Symbols USA [Photograph]”. In: (2019).
 
 [14] Planting Tree. “Norway Spruce Tree [Photograph]”. In: ().
 
