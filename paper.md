@@ -410,20 +410,11 @@ Figure 19. Logistic Regression confusion matrix. The predicted class is on the x
 
 ## Ensemble
 
-Our ensemble model received an overall accuracy of 75.35% (Figure
-[[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). Upon examining how the ensemble
-classified specific forest cover types (Figure
-[20](#fig:Ensemble_confuse){reference-type="ref"
-reference="fig:Ensemble_confuse"}), we found that Cottonwood/Willow was
-correctly classified with an accuracy of \~95% while completely
-misclssifying Aspen as Lodgepole Pine.
+Our ensemble model received an overall accuracy of 75.35% (Figure 10). Upon examining how the ensemble classified specific forest cover types (Figure 20), we found that Cottonwood/Willow was correctly classified with an accuracy of \~95% while completely misclssifying Aspen as Lodgepole Pine.
 
-![Ensemble model confusion matrix. The predicted class is on the x-axis
-and the actual class is on the y-axis. The color (and value) of the
-elements are calculated as found in Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/Ensemble_confusion_kbg.png){#fig:Ensemble_confuse}
+![](figures/Ensemble_confusion_kbg.png)
+
+Figure 20. Ensemble model confusion matrix. The predicted class is on the x-axis and the actual class is on the y-axis. The color (and value) of the elements are calculated as found in Table 2].
 
 # Discussion
 
