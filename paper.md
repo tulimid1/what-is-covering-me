@@ -72,7 +72,7 @@ Table of Contents
 
 National parks are some of the most beautiful places on this little blue planet we call home. They are some of the only remaining \"untouched\" regions of Earth that allow nature to flourish. These parks, while untouched, are not ignored. In fact, they are some of the most studied regions around the world.
 
-The University of California Irvine's machine learning repository contains a large data set on the Roosevelt National Forest in northern Colorado. This data set -- known as the forest cover type data set -- is comprised of cartographic information from four parks within the Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la Poudre) (Figure [1]). The data set contains a variety of continuous and categorical features obtained from geological surveys; including elevation, soil type, slope, hill shade at various times of day, and distance to the nearest body of water. Along with these features, each instance has a forest cover type classification, which refers to the predominant tree species in a given 30x30 meter region (Figure[2]).
+The University of California Irvine's machine learning repository contains a large data set on the Roosevelt National Forest in northern Colorado. This data set -- known as the forest cover type data set -- is comprised of cartographic information from four parks within the Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la Poudre) (Figure 1). The data set contains a variety of continuous and categorical features obtained from geological surveys; including elevation, soil type, slope, hill shade at various times of day, and distance to the nearest body of water. Along with these features, each instance has a forest cover type classification, which refers to the predominant tree species in a given 30x30 meter region (Figure 2).
 
 Current methods for classifying forest cover types involve direct observations via field personnel or estimation using remotely sensed data [[2]](#references). These approaches are often time-consuming and costly; however, the use of predictive models can streamline this process [[2]](#references). We decided to examine the accuracies of several machine learning algorithms and an ensemble learning method to predict forest cover types. Using these methods, our goal was to achieve the highest predictive poweracross all classes.
 
@@ -101,11 +101,11 @@ Blackard and Dean were the first to publish on this data set [[2]](#references).
 
 Table 1. Number of input variable subsets examined. Taken from Blackard and Dean (1999) [[2]](#references).
 
-To train the best neural network, the authors did multiple iterations of editing model parameters [[2]](#references). The neural network was initialized and kept to one input layer, one hidden layer, and one output layer. These layers were dense with no dropouts. The authors systematically changed the number of nodes in the hidden layer to determine the best learning and momentum rates. To update the weights, the neural network used back propagation. The weights for this model were initialized by randomly sampling from a uniform distribution between negative and positive one. The activation functions for the hidden layers were linear, while the activation function for the output layers were logistic. After the authors found an optimal set of parameters, they verified these parameters were optimal by creating thirty new neural networks with randomized initial synaptic weights. The authors state this process was used to ensure the weight space was fully explored due to the stochastic nature of initializing weights. After parameter tuning, a neural network with 54 input nodes, 120 hidden layer nodes, 7 output nodes, a learning rate of 0.05, and a momentum rate of 0.5 was determined to be optimal. This neural network had the highest classification accuracy of 70.58% with all 54 predictors (Figure [3]).
+To train the best neural network, the authors did multiple iterations of editing model parameters [[2]](#references). The neural network was initialized and kept to one input layer, one hidden layer, and one output layer. These layers were dense with no dropouts. The authors systematically changed the number of nodes in the hidden layer to determine the best learning and momentum rates. To update the weights, the neural network used back propagation. The weights for this model were initialized by randomly sampling from a uniform distribution between negative and positive one. The activation functions for the hidden layers were linear, while the activation function for the output layers were logistic. After the authors found an optimal set of parameters, they verified these parameters were optimal by creating thirty new neural networks with randomized initial synaptic weights. The authors state this process was used to ensure the weight space was fully explored due to the stochastic nature of initializing weights. After parameter tuning, a neural network with 54 input nodes, 120 hidden layer nodes, 7 output nodes, a learning rate of 0.05, and a momentum rate of 0.5 was determined to be optimal. This neural network had the highest classification accuracy of 70.58% with all 54 predictors (Figure 3).
 
-The authors also implemented both linear and quadratic discriminant analyses, which required less parameter tuning than neural networks, but at the cost of flexibility [[2]](#references). The quadratic discriminant analysis model was able to make predictions on subsets that did not contain categorical features and became unstable upon their addition. Of the subsets of data tested, the linear discriminant analysis model had the highest classification accuracy (\~58.38%) with all 54 predictors (Figure [3]). The quadratic discriminant analysis model achieved its highest classification accuracy (\~49.15%) with 10 predictors (Figure [3]).
+The authors also implemented both linear and quadratic discriminant analyses, which required less parameter tuning than neural networks, but at the cost of flexibility [[2]](#references). The quadratic discriminant analysis model was able to make predictions on subsets that did not contain categorical features and became unstable upon their addition. Of the subsets of data tested, the linear discriminant analysis model had the highest classification accuracy (\~58.38%) with all 54 predictors (Figure 3). The quadratic discriminant analysis model achieved its highest classification accuracy (\~49.15%) with 10 predictors (Figure 3).
 
-Overall, the authors were able to create a model that predicted the forest cover type well. All the models tested were able to perform better than chance (14%) (Figure [3]). The neural network achieved the highest overall accuracy (\~71%) when the model included all the variables. As expected, the neural network showed a steady increase in accuracy as more predictors were added. Additionally, the discriminant analyses also showed an increase in accuracy as more predictors were added.
+Overall, the authors were able to create a model that predicted the forest cover type well. All the models tested were able to perform better than chance (14%) (Figure 3). The neural network achieved the highest overall accuracy (\~71%) when the model included all the variables. As expected, the neural network showed a steady increase in accuracy as more predictors were added. Additionally, the discriminant analyses also showed an increase in accuracy as more predictors were added.
 
 The authors pose many reasons the neural network outperformed the discriminant analyses. One potential reason for this discrepancy could have been due to the underlying assumptions of the discriminant analysis models. Linear discriminant analysis models each class as a multivariate Gaussian distribution and assumes all classes share a covariance matrix. On the other hand, quadratic discriminant analysis models assume each class is normally distributed and that each class has its own covariance matrix. A neural network has no assumptions about the underlying distributions and therefore will be most flexible in modeling data. The authors state that another reason the discriminant analyses could have performed worse than neural networks was due to the non-linearity of the data. Discriminant analyses perform well with linear data while neural networks are flexible in regards to the linearity of the data. On the other hand, one area where the discriminant analyses outperformed the neural network was in computational time. The discriminant analyses took only 5 hours to run, while the neural network, once finalized, took 45 hours to finalize. The 45 hour run time of the neural network also did not take into account the time needed for the operator to manually tune all the hyper parameters.
 
@@ -123,7 +123,7 @@ One example of weighted ensemble learning is bagging, which traditionally trains
 
 ## $$K$$-Nearest Neighbors ($$K$$NN)
 
-$$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$NN classifies based on the $$K$$ closest neighbors. The $$K$$ parameter determines how many of the closest observations are considered when classifying a given sample (Algorithm 1). For example, if $$K$$ is equal to three, then the algorithm will consider the three closest training observations to the test instance and predict the classification of the new instance based on a majority vote of the three closest training observations (Figure [4]). Another parameter commonly given to $$K$$NN is the method for applying weights to each neighbor's vote during classification. A common technique is to base the weights on the distances between observations, with closer observations having a \"stronger\" vote. The weights can be determined by the inverse of the distance between observations, so closer instances have a \"stronger\" vote during classification (Algorithm 1).
+$$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$NN classifies based on the $$K$$ closest neighbors. The $$K$$ parameter determines how many of the closest observations are considered when classifying a given sample (Algorithm 1). For example, if $$K$$ is equal to three, then the algorithm will consider the three closest training observations to the test instance and predict the classification of the new instance based on a majority vote of the three closest training observations (Figure 4). Another parameter commonly given to $$K$$NN is the method for applying weights to each neighbor's vote during classification. A common technique is to base the weights on the distances between observations, with closer observations having a \"stronger\" vote. The weights can be determined by the inverse of the distance between observations, so closer instances have a \"stronger\" vote during classification (Algorithm 1).
 
 ![](figures/KNN_Example_kbg.png)
 
@@ -143,7 +143,7 @@ for i, x in enumerate(X_test)
 
 ## Support Vector Machine (SVM)
 
-Support vector machine (SVM) is a commonly used machine learning algorithm. This algorithm attempts to find a hyperplane that can distinctively split classes by maximizing the margin between the closest observations between classes. The instances used to create the hyperplane are known as the support vectors and can consist of samples both at the edge and within a given class of training data. The hyperplane itself acts as a boundary between observations that can then be used to classify new instances (Figure [5], Algorithm 2). One of the strengths of SVM is that it can account for some degree of misclassification by establishing a buffer region around the hyperplane. When establishing the hyperplane, SVM ignores misclassifications within this region to find an optimal decision boundary. Another strength of SVM is that it can use is a kernel. A kernel will transform the data into a different space with the goal of more effectively separating the classes.
+Support vector machine (SVM) is a commonly used machine learning algorithm. This algorithm attempts to find a hyperplane that can distinctively split classes by maximizing the margin between the closest observations between classes. The instances used to create the hyperplane are known as the support vectors and can consist of samples both at the edge and within a given class of training data. The hyperplane itself acts as a boundary between observations that can then be used to classify new instances (Figure 5, Algorithm 2). One of the strengths of SVM is that it can account for some degree of misclassification by establishing a buffer region around the hyperplane. When establishing the hyperplane, SVM ignores misclassifications within this region to find an optimal decision boundary. Another strength of SVM is that it can use is a kernel. A kernel will transform the data into a different space with the goal of more effectively separating the classes.
 
 ![](figures/SVM_Example_kbg.png)
 
@@ -167,39 +167,27 @@ begin
 
 ## Linear Discriminant Analysis (LDA)
 
-Linear discriminant analysis (LDA) is another good method for
-classifying data; that is, when the assumptions of the model hold true.
-LDA assumes that all the predictors are normally distributed. Naturally,
-this algorithm models the data as a multivariate Gaussian (Algorithm
-[\[algo:LDA\]](#algo:LDA){reference-type="ref" reference="algo:LDA"}).
-More specifically, each class has a mean ($\mu$) vector for all
-predictors, but each class does not have their own covariance ($\Sigma$)
-matrix. Instead, all classes are assumed to share a $\Sigma$ matrix.
-These assumptions can reasonably model data when there is enough to
-obtain an estimate of central tendency, but not enough to get a stable
-estimate of dispersion within predictors and correlation between
-predictors (Figure [[6]](#fig:LDA_Hastie){reference-type="ref"
-reference="fig:LDA_Hastie"}).
+Linear discriminant analysis (LDA) is another good method for classifying data; that is, when the assumptions of the model hold true. LDA assumes that all the predictors are normally distributed. Naturally, this algorithm models the data as a multivariate Gaussian (Algorithm 3). More specifically, each class has a mean ($\mu$) vector for all predictors, but each class does not have their own covariance ($\Sigma$) matrix. Instead, all classes are assumed to share a $\Sigma$ matrix. These assumptions can reasonably model data when there is enough to obtain an estimate of central tendency, but not enough to get a stable estimate of dispersion within predictors and correlation between predictors (Figure 6).
 
-Like all models, LDA will perform poorly if the assumptions are
-violated. For example, if most features are normally distributed but a
-powerful predictor has a Poisson distribution, its predictive power will
-go to waste because it is being poorly modeled. While the previous
-example can be fixed by scaling the differently distributed predictor,
-this algorithm has no way to account for each class having a different
-covariance matrix.
+Like all models, LDA will perform poorly if the assumptions are violated. For example, if most features are normally distributed but a powerful predictor has a Poisson distribution, its predictive power will go to waste because it is being poorly modeled. While the previous example can be fixed by scaling the differently distributed predictor, this algorithm has no way to account for each class having a different covariance matrix.
 
-![LDA classifier on simulated data. Each class is represented by a
-single color. Each class's simulated data comes from a unique $\mu$
-vector with a shared $\Sigma$ matrix, therefore not violating the LDA
-assumptions. Shaded regions represent class prediction in the area.
-Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[[6]](#references).](figures/LDA_Example_kbg.png){#fig:LDA_Hastie}
+![](figures/LDA_Example_kbg.png)
 
-::: algorithm
-**Input:** $X_{train}$, $y_{train}$, $X_{test}$ **Output:** Predictions
-Let $Classes$ be the unique numeric classes in $y_{train}$
-:::
+LDA classifier on simulated data. Each class is represented by a single color. Each class's simulated data comes from a unique $\mu$ vector with a shared $\Sigma$ matrix, therefore not violating the LDA assumptions. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+
+````
+Algorithm 3. Linear Discriminant Analysis 
+Input: X_train, y_train, X_test
+Output: Predictions 
+Let Classes be the unique numeric classes in y_train 
+for class in Classes
+    MU[class,:] = average of all predictors for instances with class class in X_train
+COV = covariance matrix of X_train 
+for i, x in enumerate(X_test)
+    for class in Classes
+        probability[class] = evaluate a multivariate Gaussian at x with parameters mu = MU[class,:] and Sigma = COV
+    Predictions[i] = argmax[probability]
+````
 
 ## Quadratic Discriminant Analysis (QDA)
 
