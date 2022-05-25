@@ -378,30 +378,15 @@ Figure 14. SVM confusion matrix. The predicted class is on the x-axis and the ac
 
 ## Linear Discriminant Analysis
 
-We used 10 fold cross-validation to determine the best solver for a LDA
-model and found that the *svd* solver performed best (Figure
-[[15]](#fig:LDA_params){reference-type="ref" reference="fig:LDA_params"}).
-Our LDA model with the *svd* solver achieved an overall accuracy of
-67.77% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). We found that our LDA model had an easier
-time predicting Spruce/Fir, Lodgepole Pine, and Krummholz than
-predicting Ponderosa Pine, Cottonwood/Willow, Aspen, and Douglas-fir
-(Figure [16](#fig:LDA_confuse){reference-type="ref"
-reference="fig:LDA_confuse"}). It appears that our LDA model confused
-Ponderosa Pines with almost exclusively Douglas-firs and conversely
-confused Cottonwood/Willows with Ponderosa Pines. The model also seemed
-to have confuse Douglas-firs for both Ponderosa and Lodgepole Pines.
+We used 10 fold cross-validation to determine the best solver for a LDA model and found that the *svd* solver performed best (Figure 15). Our LDA model with the *svd* solver achieved an overall accuracy of 67.77% (Figure 10). We found that our LDA model had an easier time predicting Spruce/Fir, Lodgepole Pine, and Krummholz than predicting Ponderosa Pine, Cottonwood/Willow, Aspen, and Douglas-fir (Figure 16). It appears that our LDA model confused Ponderosa Pines with almost exclusively Douglas-firs and conversely confused Cottonwood/Willows with Ponderosa Pines. The model also seemed to have confuse Douglas-firs for both Ponderosa and Lodgepole Pines.
 
-![LDA parameter space. *svd* solver uses singular value decomposition;
-*lsqr* solver uses least squares solution; *eigen* solver uses
-eigenvalue decomposition
-[[9]](#references).](figures/LDA_params_kbg.png){#fig:LDA_params}
+![](figures/LDA_params_kbg.png)
 
-![LDA confusion matrix. The predicted class is on the x-axis and the
-actual class is on the y-axis. The color (and value) of the elements are
-calculated as found in Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/LDA_confusion_kbg.png){#fig:LDA_confuse}
+Figure 15. LDA parameter space. *svd* solver uses singular value decomposition; *lsqr* solver uses least squares solution; *eigen* solver uses eigenvalue decomposition [[9]](#references).
+
+![](figures/LDA_confusion_kbg.png)
+
+Figure 16. LDA confusion matrix. The predicted class is on the x-axis and the actual class is on the y-axis. The color (and value) of the elements are calculated as found in Table 2].
 
 ## Quadratic Discriminant Analysis
 
