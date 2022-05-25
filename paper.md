@@ -346,7 +346,7 @@ Equation 2. $$confusion[i,j] = \frac{\Sigma1 (y_i = \hat{y_j})}{ \Sigma1 (y_i)}
 |       |       | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ | _A)}$ |
 +-------+-------+-------+-------+-------+-------+-------+-------+-------+
 
-Table 2. Confusion matrix element calculations. Along the diagonal there are the correct classification and elsewhere are the incorrect classifications. Abbreviations: SF: Spruce/Fir, LP: Lodgepole Pine, PP: Ponderosa Pine, CW: Cottonwood/Willow, A: Aspen, Df: Douglas-fir, K: Krummholz, $X_A$: Actual X class, $X_P$: Predicted X class. The calculation for an element can be seen in Equation 2.
+Table 2. Confusion matrix element calculations. Along the diagonal there are the correct classification and elsewhere are the incorrect classifications. Abbreviations: SF: Spruce/Fir, LP: Lodgepole Pine, PP: Ponderosa Pine, CW: Cottonwood/Willow, A: Aspen, Df: Douglas-fir, K: Krummholz, $$X_A$$: Actual X class, $$X_P$$: Predicted X class. The calculation for an element can be seen in Equation 2.
 
 ![](figures/all_models_scores_kbg.png)
 
@@ -366,30 +366,15 @@ Figure 12. $$K$$NN confusion matrix. The predicted class is on the x-axis and th
 
 ## Support Vector Machine
 
-After using a standard scaler on our predictors, we used 10 fold
-cross-validation to determine the best kernel and regulating parameter
-for the SVM model and found that a model with a *linear* kernel and a
-regulating parameter of *8.684* produced the best performance (Figure
-[[13]](#fig:SVM_params){reference-type="ref" reference="fig:SVM_params"}).
-Due to time constraints, optimization of these parameters were performed
-on a subset of the training data set. Our SVM model received an overall
-accuracy of 61.70% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). Upon further examination of the SVM
-confusion matrix, SVM misclassified every instance of Aspen and was only
-able to strongly predict Lodgepole and Ponderosa Pine (Figure
-[[14]](#fig:SVM_confuse){reference-type="ref"
-reference="fig:SVM_confuse"}).
+After using a standard scaler on our predictors, we used 10 fold cross-validation to determine the best kernel and regulating parameter for the SVM model and found that a model with a *linear* kernel and a regulating parameter of *8.684* produced the best performance (Figure 13). Due to time constraints, optimization of these parameters were performed on a subset of the training data set. Our SVM model received an overall accuracy of 61.70% (Figure 10). Upon further examination of the SVM confusion matrix, SVM misclassified every instance of Aspen and was only able to strongly predict Lodgepole and Ponderosa Pine (Figure 14]).
 
-![SVM parameter space. Kernel refers to the function used by SVM to
-transform the data into a higher dimension. The C value is a
-regularization parameter that facilitates the amount of acceptable
-misclassifications](figures/SVM_params_kbg.png){#fig:SVM_params}
+![](figures/SVM_params_kbg.png)
 
-![SVM confusion matrix. The predicted class is on the x-axis and the
-actual class is on the y-axis. The color (and value) of the elements are
-calculated as found in Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/SVM_confusion_kbg.png){#fig:SVM_confuse}
+Figure 13. SVM parameter space. Kernel refers to the function used by SVM to transform the data into a higher dimension. The C value is a regularization parameter that facilitates the amount of acceptable misclassifications
+
+![](figures/SVM_confusion_kbg.png)
+
+Figure 14. SVM confusion matrix. The predicted class is on the x-axis and the actual class is on the y-axis. The color (and value) of the elements are calculated as found in Table 2.
 
 ## Linear Discriminant Analysis
 
