@@ -123,7 +123,7 @@ One example of weighted ensemble learning is bagging, which traditionally trains
 
 ## $$K$$-Nearest Neighbors ($$K$$NN)
 
-$$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$NN classifies based on the $$K$$ closest neighbors. The $$K$$ parameter determines how many of the closest observations are considered when classifying a given sample (Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}). For example, if $$K$$ is equal to three, then the algorithm will consider the three closest training observations to the test instance and predict the classification of the new instance based on a majority vote of the three closest training observations (Figure [[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}). Another parameter commonly given to $$K$$NN is the method for applying weights to each neighbor's vote during classification. A common technique is to base the weights on the distances between observations, with closer observations having a \"stronger\" vote. The weights can be determined by the inverse of the distance between observations, so closer instances have a \"stronger\" vote during classification (Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}).
+$$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$NN classifies based on the $$K$$ closest neighbors. The $$K$$ parameter determines how many of the closest observations are considered when classifying a given sample (Algorithm 1). For example, if $$K$$ is equal to three, then the algorithm will consider the three closest training observations to the test instance and predict the classification of the new instance based on a majority vote of the three closest training observations (Figure [4]). Another parameter commonly given to $$K$$NN is the method for applying weights to each neighbor's vote during classification. A common technique is to base the weights on the distances between observations, with closer observations having a \"stronger\" vote. The weights can be determined by the inverse of the distance between observations, so closer instances have a \"stronger\" vote during classification (Algorithm 1).
 
 ![](figures/KNN_Example_kbg.png)
 
@@ -143,33 +143,27 @@ for i, x in enumerate(X_test)
 
 ## Support Vector Machine (SVM)
 
-Support vector machine (SVM) is a commonly used machine learning
-algorithm. This algorithm attempts to find a hyperplane that can
-distinctively split classes by maximizing the margin between the closest
-observations between classes. The instances used to create the
-hyperplane are known as the support vectors and can consist of samples
-both at the edge and within a given class of training data. The
-hyperplane itself acts as a boundary between observations that can then
-be used to classify new instances (Figure
-[[5]](#fig:SVM_Hastie){reference-type="ref" reference="fig:SVM_Hastie"},
-Algorithm [\[algo:SVM\]](#algo:SVM){reference-type="ref"
-reference="algo:SVM"}). One of the strengths of SVM is that it can
-account for some degree of misclassification by establishing a buffer
-region around the hyperplane. When establishing the hyperplane, SVM
-ignores misclassifications within this region to find an optimal
-decision boundary. Another strength of SVM is that it can use is a
-kernel. A kernel will transform the data into a different space with the
-goal of more effectively separating the classes.
+Support vector machine (SVM) is a commonly used machine learning algorithm. This algorithm attempts to find a hyperplane that can distinctively split classes by maximizing the margin between the closest observations between classes. The instances used to create the hyperplane are known as the support vectors and can consist of samples both at the edge and within a given class of training data. The hyperplane itself acts as a boundary between observations that can then be used to classify new instances (Figure [5], Algorithm 2). One of the strengths of SVM is that it can account for some degree of misclassification by establishing a buffer region around the hyperplane. When establishing the hyperplane, SVM ignores misclassifications within this region to find an optimal decision boundary. Another strength of SVM is that it can use is a kernel. A kernel will transform the data into a different space with the goal of more effectively separating the classes.
 
-![SVM classifier on simulated data. Each class is represented by a
-single color. Shaded regions represent class prediction in the area.
-Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[[6]](#references).](figures/SVM_Example_kbg.png){#fig:SVM_Hastie}
+![](figures/SVM_Example_kbg.png)
 
-::: algorithm
-**Input:** $X_{train}$, $X_{test}$, $C$, $Kernel$ **Output:**
-Predictions
-:::
+Figure 5. SVM classifier on simulated data. Each class is represented by a single color. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
+
+````
+Algorithm 2. Support Vector Machine
+Input: X_train, X_test, C, Kernel
+Output: Predictions
+begin 
+    X_train_transformed = transform X_train using Kernel
+    support vectors = the set of instances that best represents distinct cluster in X_train_transformed
+    hyperplane = calculate hyperplane that maximizes the margin between support vectors
+    for i, x in enumerate (X_test)
+        if x exists on one side of hyperplane then 
+            Predictions[i] = 1
+        else if x exists on other side of hyperplane then 
+            Predictions[i] = 0
+````
+
 
 ## Linear Discriminant Analysis (LDA)
 
