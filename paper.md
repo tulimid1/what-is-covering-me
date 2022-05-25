@@ -420,142 +420,37 @@ Figure 20. Ensemble model confusion matrix. The predicted class is on the x-axis
 
 ## Moderate performers
 
-Logistic regression had the best performance of the moderate
-classifiers. One reason logistic regression may have under performed,
-relative to $$K$$NN, was because logistic regression creates linear
-boundaries that can lead to multiple misclassifications (Figure
-[[8]](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}).
-Logistic regression also assumes there is little to no multicollinearity
-among features, which may occur in this data set
-[[11]](#references).
+Logistic regression had the best performance of the moderate classifiers. One reason logistic regression may have under performed, relative to $$K$$NN, was because logistic regression creates linear boundaries that can lead to multiple misclassifications (Figure 8). Logistic regression also assumes there is little to no multicollinearity among features, which may occur in this data set [[11]](#references).
 
-As previously stated, LDA assumes that each class shares the same
-covariance matrix while QDA assumes each class has their own. Since QDA
-outperformed LDA, the latter assumption is most likely correct. Still,
-both LDA and QDA under performed relative to $$K$$NN. This may be due to
-both methods assuming each predictor is normally distributed or the data
-not being easily separable in its current space.
+As previously stated, LDA assumes that each class shares the same covariance matrix while QDA assumes each class has their own. Since QDA outperformed LDA, the latter assumption is most likely correct. Still, both LDA and QDA under performed relative to $$K$$NN. This may be due to both methods assuming each predictor is normally distributed or the data not being easily separable in its current space.
 
-SVM had the poorest performance of the models included in our ensemble.
-There are two characteristics of the data that may have impacted SVM's
-accuracy. First, when several classes overlap within a data set, SVM
-will have difficulty separating the classes
-[[12]](#references). Secondly, SVM tends to perform best when
-the number of features far exceeds the number of observations
-[[4]](#references). Both of these issues are
-typically mitigated with the use of a kernel that transforms the data
-into a different space. However, we chose to use a linear kernel that
-only performs a simple transformation. Unlike the other models, the
-parameters of SVM were optimized on a subset of the training data. The
-linear kernel chosen through cross validation may perform well on this
-subset; however, it led to a poor performance on the test set. The
-decision to use a subset was made to decrease computation time and is
-most likely the biggest factor affecting performance.
+SVM had the poorest performance of the models included in our ensemble. There are two characteristics of the data that may have impacted SVM's accuracy. First, when several classes overlap within a data set, SVM will have difficulty separating the classes [[12]](#references). Secondly, SVM tends to perform best when the number of features far exceeds the number of observations [[4]](#references). Both of these issues are typically mitigated with the use of a kernel that transforms the data into a different space. However, we chose to use a linear kernel that only performs a simple transformation. Unlike the other models, the parameters of SVM were optimized on a subset of the training data. The linear kernel chosen through cross validation may perform well on this subset; however, it led to a poor performance on the test set. The decision to use a subset was made to decrease computation time and is most likely the biggest factor affecting performance.
 
 ## Strong performer
 
-$$K$$NN was our strongest model. This may be due to $$K$$NN not having any
-of the assumptions tied to the moderate performers. Additionally, $$K$$NN
-has a tendency to perform well when the number of observations is far
-greater than the number of features
-[[4]](#references). During the training of $$K$$NN, the
-model stores the training instances that are referenced during testing.
-While a large number of instances may produce high computation times,
-they are necessary to produce an accurate classification of unknown
-observations. Additionally, unlike logistic regression and linear
-discriminate analysis, $$K$$NN creates non-linear boundaries during
-classification (Figure [[4]](#fig:KNN_Hastie){reference-type="ref"
-reference="fig:KNN_Hastie"}).
+$$K$$NN was our strongest model. This may be due to $$K$$NN not having any of the assumptions tied to the moderate performers. Additionally, $$K$$NN has a tendency to perform well when the number of observations is far greater than the number of features [[4]](#references). During the training of $$K$$NN, the model stores the training instances that are referenced during testing. While a large number of instances may produce high computation times, they are necessary to produce an accurate classification of unknown observations. Additionally, unlike logistic regression and linear discriminate analysis, $$K$$NN creates non-linear boundaries during classification (Figure 4).
 
 ## What happened with the ensemble model?
 
-One of the strengths of using an ensemble method with several types of
-models is that the varying assumptions underlying each model tend to
-work against each other in a productive manner. For example, if LDA
-incorrectly assumes each class shares a covariance matrix -- which leads
-to multiple misclassifications -- then including other models in the
-ensemble that do not share this assumption can potentially lead to an
-overall correct classification through majority vote. This scenario
-assumes that each model has a similar performance on the training set.
-Yet, this is not the case for our ensemble. Since a majority of our
-models have a significant amount of misclassifications (Figure
-[[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}), there is an increased likelihood that the
-several moderate performers will have a stronger influence on the
-majority vote than the one strong performer. For example, SVM, LDA, QDA,
-and Logistic regression all produced poor classifications for Aspen;
-however, $$K$$NN can reliably classify Aspen with \~95% accuracy. Despite
-the strong classification of Aspen via $$K$$NN, the ensemble model's
-classification of Aspen was poor. Within this scenario, the multiple
-moderate performers are likely taking weight away from the single strong
-performer, leading to misclassifications.
+One of the strengths of using an ensemble method with several types of models is that the varying assumptions underlying each model tend to work against each other in a productive manner. For example, if LDA incorrectly assumes each class shares a covariance matrix -- which leads to multiple misclassifications -- then including other models in the ensemble that do not share this assumption can potentially lead to an overall correct classification through majority vote. This scenario assumes that each model has a similar performance on the training set. Yet, this is not the case for our ensemble. Since a majority of our models have a significant amount of misclassifications (Figure 10), there is an increased likelihood that the several moderate performers will have a stronger influence on the majority vote than the one strong performer. For example, SVM, LDA, QDA, and Logistic regression all produced poor classifications for Aspen; however, $$K$$NN can reliably classify Aspen with \~95\% accuracy. Despite the strong classification of Aspen via $$K$$NN, the ensemble model's classification of Aspen was poor. Within this scenario, the multiple moderate performers are likely taking weight away from the single strong performer, leading to misclassifications.
 
 ## Future directions
 
-There are many future directions this project can take; here we focus on
-some that may have the largest impacts on performance. One possible
-direction is the introduction of a weighted majority vote in the
-ensemble model. This entails assigning weights to each model's
-predictions. Weights could be determined by each model's relative
-performance on a subset of the training data. Therefore, models that
-perform better will have a greater influence during ensemble
-classification. Weights could also be determined based on how accurate a
-certain model is at predicting a specific forest cover type. For
-example, SVM consistently misclassified Aspen as Lodgepole Pine and
-strongly predicted Ponderosa Pine with an accuracy of \~80%. Within this
-example, if SVM strongly predicts a new instance is Ponderosa Pine, then
-it will have a greater influence during the majority vote than if it
-predicted Aspen. Additionally, the level of agreeableness between
-performers would provide further insight into what each model uniquely
-learned about the data set. A juxtaposition of all the confusion
-matrices reveal all models correctly classifying Lodgepole Pine with
-accuracy's between \~75% and \~100%. One could also look at the
-agreeability among miscalssifications for each model. If patterns of
-misclassifications occur amongst multiple models, then there is room to
-prune models that do not learn anything new about the data set. Lastly,
-implementing a bagging or boosting method may lead to the best
-predictive performance. This could be achieved in two ways. First, one
-could use boosting on our strong performer to see if one could account
-for the misclassification for Cottonwood/Willow (Figure
-[[12]](#fig:KNN_confuse){reference-type="ref"
-reference="fig:KNN_confuse"}). Secondly, we could use boosting on our
-moderate performers. This should increase the predictive power by
-minimizing training errors, but at the cost of exponentially increasing
-computation time.
+There are many future directions this project can take; here we focus on some that may have the largest impacts on performance. One possible direction is the introduction of a weighted majority vote in the ensemble model. This entails assigning weights to each model's predictions. Weights could be determined by each model's relative performance on a subset of the training data. Therefore, models that perform better will have a greater influence during ensemble classification. Weights could also be determined based on how accurate a certain model is at predicting a specific forest cover type. For example, SVM consistently misclassified Aspen as Lodgepole Pine and strongly predicted Ponderosa Pine with an accuracy of \~80%. Within this example, if SVM strongly predicts a new instance is Ponderosa Pine, then it will have a greater influence during the majority vote than if it predicted Aspen. Additionally, the level of agreeableness between performers would provide further insight into what each model uniquely learned about the data set. A juxtaposition of all the confusion matrices reveal all models correctly classifying Lodgepole Pine with accuracy's between \~75% and \~100%. One could also look at the agreeability among miscalssifications for each model. If patterns of misclassifications occur amongst multiple models, then there is room to prune models that do not learn anything new about the data set. Lastly, implementing a bagging or boosting method may lead to the best predictive performance. This could be achieved in two ways. First, one could use boosting on our strong performer to see if one could account for the misclassification for Cottonwood/Willow (Figure 12). Secondly, we could use boosting on our moderate performers. This should increase the predictive power by minimizing training errors, but at the cost of exponentially increasing computation time.
 
 # Conclusion
 
-We set out to create a model that was able to accurately predict forest
-cover type from 54 cartographic variables describing a plethora of 30x30
-meter regions of the Roosevelt National Forest. To accomplish this, we
-created an ensemble classifier consisting of several linear and
-non-linear classifiers. $$K$$NN was our strongest classifier with an
-accuracy of 96.87%. The rest of our models performed moderately with
-accuracies between 61.70% and 71.66% (i.e. LDA, Logistic, QDA, SVM). To
-combine each classifier's prediction we used an unweighted majority
-vote, which has been shown to increase performance
-[[10]](#references).
+We set out to create a model that was able to accurately predict forest cover type from 54 cartographic variables describing a plethora of 30x30 meter regions of the Roosevelt National Forest. To accomplish this, we created an ensemble classifier consisting of several linear and non-linear classifiers. $$K$$NN was our strongest classifier with an accuracy of 96.87\%. The rest of our models performed moderately with accuracies between 61.70\% and 71.66\% (i.e. LDA, Logistic, QDA, SVM). To combine each classifier's prediction we used an unweighted majority vote, which has been shown to increase performance [[10]](#references).
 
-Our ensemble classification performed poorly when compared to $$K$$NN with
-an accuracy of 75.35%; however, it did perform better than each of our
-moderate classifiers. It also performed better than all neural network
-used by Blackard and Dean, which achieved an accuracy of \~71%
-[[2]](#references).
+Our ensemble classification performed poorly when compared to $$K$$NN with an accuracy of 75.35\%; however, it did perform better than each of our moderate classifiers. It also performed better than all neural network used by Blackard and Dean, which achieved an accuracy of \~71\% [[2]](#references).
 
 # Replication
 
-As firm believers in open science, we provide all code and data needed
-to replicate our results. All files used for this project are on a
-[GitHub Repository](https://github.com/tulimid1/what-is-covering-me).
-Please visit our
-[website](https://tulimid1.github.io/what-is-covering-me/) for more
-details.
+As firm believers in open science, we provide all code and data needed to replicate our results. All files used for this project are on a [GitHub Repository](https://github.com/tulimid1/what-is-covering-me). Please visit our [website](https://tulimid1.github.io/what-is-covering-me/) for more details.
 
 # Acknowledgements
 
-We would like to thank the authors of the original paper and data set:
-Jock A. Blackard, Denis J. Dean, and Charles W. Anderson for making
-everything publicly available for others to learn.
+We would like to thank the authors of the original paper and data set: Jock A. Blackard, Denis J. Dean, and Charles W. Anderson for making everything publicly available for others to learn.
 
 # References
 
