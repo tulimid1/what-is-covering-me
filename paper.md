@@ -76,9 +76,11 @@ The University of California Irvine's machine learning repository contains a lar
 
 Current methods for classifying forest cover types involve direct observations via field personnel or estimation using remotely sensed data [[2]](#references). These approaches are often time-consuming and costly; however, the use of predictive models can streamline this process [[2]](#references). We decided to examine the accuracies of several machine learning algorithms and an ensemble learning method to predict forest cover types. Using these methods, our goal was to achieve the highest predictive poweracross all classes.
 
-![](figures/BD99_location_map.png) Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
+![](figures/BD99_location_map.png) 
+Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
-![](figures/Forest_Covers_bbg.png) Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references), [[13]](#references), [[7]](#references), [[15]](#references), [[3]](#references), [[1]](#references), [[5]](#references). A condensed list of predictors can be seen in bottom right.
+![](figures/Forest_Covers_bbg.png) 
+Figure 2. Forest cover types and predictors. The data set contains 581,012 instances, 54 predictors, and 7 classes. Examples of the seven cover type classifications can be seen in the pictures [[14]](#references), [[13]](#references), [[7]](#references), [[15]](#references), [[3]](#references), [[1]](#references), [[5]](#references). A condensed list of predictors can be seen in bottom right.
 
 ## Previous literature using forest cover type data set
 
@@ -105,7 +107,8 @@ Overall, the authors were able to create a model that predicted the forest cover
 
 The authors pose many reasons the neural network outperformed the discriminant analyses. One potential reason for this discrepancy could have been due to the underlying assumptions of the discriminant analysis models. Linear discriminant analysis models each class as a multivariate Gaussian distribution and assumes all classes share a covariance matrix. On the other hand, quadratic discriminant analysis models assume each class is normally distributed and that each class has its own covariance matrix. A neural network has no assumptions about the underlying distributions and therefore will be most flexible in modeling data. The authors state that another reason the discriminant analyses could have performed worse than neural networks was due to the non-linearity of the data. Discriminant analyses perform well with linear data while neural networks are flexible in regards to the linearity of the data. On the other hand, one area where the discriminant analyses outperformed the neural network was in computational time. The discriminant analyses took only 5 hours to run, while the neural network, once finalized, took 45 hours to finalize. The 45 hour run time of the neural network also did not take into account the time needed for the operator to manually tune all the hyper parameters.
 
-![](figures/BD_fig4_kbg.png) Figure 3. Comparison of artificial neural network and discriminant analysis classification results. *NN*: neural network, *LDA*: linear discriminant analysis; *QDA* quadratic discriminant analysis. Republished from Blackard and Dean (1999) [[2]](#references).
+![](figures/BD_fig4_kbg.png) 
+Figure 3. Comparison of artificial neural network and discriminant analysis classification results. *NN*: neural network, *LDA*: linear discriminant analysis; *QDA* quadratic discriminant analysis. Republished from Blackard and Dean (1999) [[2]](#references).
 
 ### Oza and Russell (2001) [[8]](#references)
 
@@ -115,34 +118,15 @@ One example of weighted ensemble learning is bagging, which traditionally trains
 
 # Algorithms
 
-## $K$-Nearest Neighbors ($K$NN)
+## $$K$$-Nearest Neighbors ($$K$$NN)
 
-$K$-Nearest Neighbors ($K$NN) is a powerful method for classification.
-$K$NN classifies based on the $k$ closest neighbors. The $k$ parameter
-determines how many of the closest observations are considered when
-classifying a given sample (Algorithm
-[\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}).
-For example, if $k$ is equal to three, then the algorithm will consider
-the three closest training observations to the test instance and predict
-the classification of the new instance based on a majority vote of the
-three closest training observations (Figure
-[[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}).
-Another parameter commonly given to $K$NN is the method for applying
-weights to each neighbor's vote during classification. A common
-technique is to base the weights on the distances between observations,
-with closer observations having a \"stronger\" vote. The weights can be
-determined by the inverse of the distance between observations, so
-closer instances have a \"stronger\" vote during classification
-(Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref"
-reference="algo:KNN"}).
+$$K$$-Nearest Neighbors ($$K$$NN) is a powerful method for classification. $$K$$NN classifies based on the $$K$$ closest neighbors. The $$K$$ parameter determines how many of the closest observations are considered when classifying a given sample (Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}). For example, if $$K$$ is equal to three, then the algorithm will consider the three closest training observations to the test instance and predict the classification of the new instance based on a majority vote of the three closest training observations (Figure [[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}). Another parameter commonly given to $$K$$NN is the method for applying weights to each neighbor's vote during classification. A common technique is to base the weights on the distances between observations, with closer observations having a \"stronger\" vote. The weights can be determined by the inverse of the distance between observations, so closer instances have a \"stronger\" vote during classification (Algorithm [\[algo:KNN\]](#algo:KNN){reference-type="ref" reference="algo:KNN"}).
 
-![$K$NN classifier on simulated data. Each class is represented by a
-single color. Shaded regions represent class prediction in the area.
-Inspiration from Hastie et al. - *Elements of Statistical Learning*
-[[6]](#references).](figures/KNN_Example_kbg.png){#fig:KNN_Hastie}
+![](figures/KNN_Example_kbg.png)
+$$K$$NN classifier on simulated data. Each class is represented by a single color. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
 ::: algorithm
-**Input:** $X_{train}$, $y_{train}$, $X_{test}$, $k$ **Output:**
+**Input:** $X_{train}$, $y_{train}$, $X_{test}$, $$K$$ **Output:**
 Predictions
 :::
 
@@ -282,7 +266,7 @@ can produce a more stable and accurate prediction
 
 ![Ensemble classifier on simulated data. Each class is represented by a
 single color. The ensemble classifier is made from the previous models
-trained on the simulated data (e.g., $K$NN \[Figure
+trained on the simulated data (e.g., $$K$$NN \[Figure
 [[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}\],
 SVM \[Figure [[5]](#fig:SVM_Hastie){reference-type="ref"
 reference="fig:SVM_Hastie"}\], LDA \[Figure
@@ -296,7 +280,7 @@ Statistical Learning*
 [[6]](#references).](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
 
 ::: algorithm
-**Input:** $K$NN, SVM, LDA, QDA, Logistic Regression, $X_{test}$
+**Input:** $$K$$NN, SVM, LDA, QDA, Logistic Regression, $X_{test}$
 **Output:** Predictions
 :::
 
@@ -429,30 +413,30 @@ label="table:classification_confusion"}
 ![Model scores on test set. Scores were calculated according to Equation
 [\[eq:avg_accuracy\]](#eq:avg_accuracy){reference-type="ref"
 reference="eq:avg_accuracy"}. A threshold of 80% was used to determine
-if a model was considered a strong (i.e., $K$NN) or moderate performer
+if a model was considered a strong (i.e., $$K$$NN) or moderate performer
 (i.e., LDA, Logistic Regression, QDA, SVM,
 Ensemble)](figures/all_models_scores_kbg.png){#fig:all_acc_bar}
 
-## $K$-Nearest Neighbors
+## $$K$$-Nearest Neighbors
 
 We used 10 fold cross-validation to determine the optimal number of
-neighbors and the type of weight for our $K$NN model. We found that *5*
+neighbors and the type of weight for our $$K$$NN model. We found that *5*
 neighbors with a weight based on *distance* produced the best
 performance with an accuracy of 96.87% (Figures
 [[11]](#fig:KNN_params){reference-type="ref" reference="fig:KNN_params"} &
 [[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). $K$NN was able to reliably predict a
+reference="fig:all_acc_bar"}). $$K$$NN was able to reliably predict a
 majority of the forest cover types; however, the model repeatedly
 confused Cottonwood/Willow with Ponderosa Pine or Douglas-fir (Figure
 [[12]](#fig:KNN_confuse){reference-type="ref"
 reference="fig:KNN_confuse"}).
 
-![$K$NN parameter space. N neighbors refers the the number of neighbors
-($k$) the algorithm used to classify a given observation. The weight
+![$$K$$NN parameter space. N neighbors refers the the number of neighbors
+($$K$$) the algorithm used to classify a given observation. The weight
 parameter determines if the model should assign weights when referencing
 each N neighbor.](figures/KNN_params_kbg.png){#fig:KNN_params}
 
-![$K$NN confusion matrix. The predicted class is on the x-axis and the
+![$$K$$NN confusion matrix. The predicted class is on the x-axis and the
 actual class is on the y-axis. The color of each element is determined
 by the relative accuracy of the predicted and actual combination to the
 overall number of instances for the actual class (Equation
@@ -588,7 +572,7 @@ reference="table:classification_confusion"}.](figures/Ensemble_confusion_kbg.png
 
 Logistic regression had the best performance of the moderate
 classifiers. One reason logistic regression may have under performed,
-relative to $K$NN, was because logistic regression creates linear
+relative to $$K$$NN, was because logistic regression creates linear
 boundaries that can lead to multiple misclassifications (Figure
 [[8]](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}).
 Logistic regression also assumes there is little to no multicollinearity
@@ -598,7 +582,7 @@ among features, which may occur in this data set
 As previously stated, LDA assumes that each class shares the same
 covariance matrix while QDA assumes each class has their own. Since QDA
 outperformed LDA, the latter assumption is most likely correct. Still,
-both LDA and QDA under performed relative to $K$NN. This may be due to
+both LDA and QDA under performed relative to $$K$$NN. This may be due to
 both methods assuming each predictor is normally distributed or the data
 not being easily separable in its current space.
 
@@ -620,16 +604,16 @@ most likely the biggest factor affecting performance.
 
 ## Strong performer
 
-$K$NN was our strongest model. This may be due to $K$NN not having any
-of the assumptions tied to the moderate performers. Additionally, $K$NN
+$$K$$NN was our strongest model. This may be due to $$K$$NN not having any
+of the assumptions tied to the moderate performers. Additionally, $$K$$NN
 has a tendency to perform well when the number of observations is far
 greater than the number of features
-[[4]](#references). During the training of $K$NN, the
+[[4]](#references). During the training of $$K$$NN, the
 model stores the training instances that are referenced during testing.
 While a large number of instances may produce high computation times,
 they are necessary to produce an accurate classification of unknown
 observations. Additionally, unlike logistic regression and linear
-discriminate analysis, $K$NN creates non-linear boundaries during
+discriminate analysis, $$K$$NN creates non-linear boundaries during
 classification (Figure [[4]](#fig:KNN_Hastie){reference-type="ref"
 reference="fig:KNN_Hastie"}).
 
@@ -650,8 +634,8 @@ reference="fig:all_acc_bar"}), there is an increased likelihood that the
 several moderate performers will have a stronger influence on the
 majority vote than the one strong performer. For example, SVM, LDA, QDA,
 and Logistic regression all produced poor classifications for Aspen;
-however, $K$NN can reliably classify Aspen with \~95% accuracy. Despite
-the strong classification of Aspen via $K$NN, the ensemble model's
+however, $$K$$NN can reliably classify Aspen with \~95% accuracy. Despite
+the strong classification of Aspen via $$K$$NN, the ensemble model's
 classification of Aspen was poor. Within this scenario, the multiple
 moderate performers are likely taking weight away from the single strong
 performer, leading to misclassifications.
@@ -695,14 +679,14 @@ We set out to create a model that was able to accurately predict forest
 cover type from 54 cartographic variables describing a plethora of 30x30
 meter regions of the Roosevelt National Forest. To accomplish this, we
 created an ensemble classifier consisting of several linear and
-non-linear classifiers. $K$NN was our strongest classifier with an
+non-linear classifiers. $$K$$NN was our strongest classifier with an
 accuracy of 96.87%. The rest of our models performed moderately with
 accuracies between 61.70% and 71.66% (i.e. LDA, Logistic, QDA, SVM). To
 combine each classifier's prediction we used an unweighted majority
 vote, which has been shown to increase performance
 [[10]](#references).
 
-Our ensemble classification performed poorly when compared to $K$NN with
+Our ensemble classification performed poorly when compared to $$K$$NN with
 an accuracy of 75.35%; however, it did perform better than each of our
 moderate classifiers. It also performed better than all neural network
 used by Blackard and Dean, which achieved an accuracy of \~71%
