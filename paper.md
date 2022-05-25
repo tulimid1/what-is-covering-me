@@ -81,8 +81,7 @@ contains a large data set on the Roosevelt National Forest in northern
 Colorado. This data set -- known as the forest cover type data set -- is
 comprised of cartographic information from four parks within the
 Roosevelt National Forest (e.g Rawah, Comanche Peak, Neota, and Cache la
-Poudre) (Figure [[1]](#fig:loc_map){reference-type="ref"
-reference="fig:loc_map"}). The data set contains a variety of continuous
+Poudre) (Figure [1]). The data set contains a variety of continuous
 and categorical features obtained from geological surveys; including
 elevation, soil type, slope, hill shade at various times of day, and
 distance to the nearest body of water. Along with these features, each
@@ -101,7 +100,7 @@ and an ensemble learning method to predict forest cover types. Using
 these methods, our goal was to achieve the highest predictive power
 across all classes.
 
-![](figures/BD99_location_map.png) Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
+![](figures/BD99_location_map.png) Figure 1. Study area location map. Taken from Blackard and Dean (1999) [[2]](#references).
 
 ![Forest cover types and predictors. The data set contains 581,012
 instances, 54 predictors, and 7 classes. Examples of the seven cover
