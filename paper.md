@@ -390,29 +390,15 @@ Figure 16. LDA confusion matrix. The predicted class is on the x-axis and the ac
 
 ## Quadratic Discriminant Analysis
 
-We used 10 fold cross-validation to determine the optimal parameters for
-a QDA model and found that a regulating parameter of *0.14* performed
-the best (Figure [17](#fig:QDA_params){reference-type="ref"
-reference="fig:QDA_params"}). Our QDA model achieved an overall accuracy
-of 68.82% (Figure [[10]](#fig:all_acc_bar){reference-type="ref"
-reference="fig:all_acc_bar"}). We found that our QDA model had an easier
-time predicting Spruce/Fir, Lodgepole Pine, Ponderosa Pine,
-Cottonwood/Willow than predicting Aspen, Douglas-fir, and Krummholz
-(Figure [18](#fig:QDA_confuse){reference-type="ref"
-reference="fig:QDA_confuse"}). Our QDA model mistook Aspens for
-Lodgepole Pines, Douglas-fir for Ponderosa Pines, and Krummholz for
-Spruce/Fir.
+We used 10 fold cross-validation to determine the optimal parameters for a QDA model and found that a regulating parameter of *0.14* performed the best (Figure 17). Our QDA model achieved an overall accuracy of 68.82% (Figure 10). We found that our QDA model had an easier time predicting Spruce/Fir, Lodgepole Pine, Ponderosa Pine, Cottonwood/Willow than predicting Aspen, Douglas-fir, and Krummholz (Figure 18). Our QDA model mistook Aspens for Lodgepole Pines, Douglas-fir for Ponderosa Pines, and Krummholz for Spruce/Fir.
 
-![QDA parameter space. Regulating parameter refers to the regularization
-of per-class covariance [[9]](#references). Some bars have
-error bars due to binning of x-values and others do not have error bars
-because of no binning.](figures/QDA_params_kbg.png){#fig:QDA_params}
+![](figures/QDA_params_kbg.png)
 
-![QDA confusion matrix. The predicted class is on the x-axis and the
-actual class is on the y-axis. The color (and value) of the elements are
-calculated as found in Table
-[[2]](#table:classification_confusion){reference-type="ref"
-reference="table:classification_confusion"}.](figures/QDA_confusion_kbg.png){#fig:QDA_confuse}
+Figure 17. QDA parameter space. Regulating parameter refers to the regularization of per-class covariance [[9]](#references). Some bars have error bars due to binning of x-values and others do not have error bars because of no binning.
+
+![](figures/QDA_confusion_kbg.png)
+
+Figure 18. QDA confusion matrix. The predicted class is on the x-axis and the actual class is on the y-axis. The color (and value) of the elements are calculated as found in Table 2.
 
 ## Logistic Regression
 
