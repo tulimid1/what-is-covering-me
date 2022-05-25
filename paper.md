@@ -232,41 +232,26 @@ for i, x in enumerate(X_test)
         Predictions[i] = 0
 ````
 
-## Ensemble Learning
+## Ensemble 
 
-Ensemble learning is a technique that utilizes several models to
-increase predictive performance. These models can be the same algorithm
-with mutliple versions of the training data set (e.g. bagging); they can
-be the same algorithm repeated with re-weighted samples of the training
-set based on previous model performance (e.g. boosting); or they can be
-several different algorithms that are trained on the same data.
-Regardless, an ensemble model typically predicts via a majority vote.
-For the latter example, utilizing several algorithms with their various
-assumptions and biases allows algorithms to account for each other's
-weaknesses. If the multiple assumptions and biases of each algorithm
-produce a series of weak learners with poor performances, combining them
-can produce a more stable and accurate prediction
-[[10]](#references).
+Ensemble learning is a technique that utilizes several models to increase predictive performance. These models can be the same algorithm with mutliple versions of the training data set (e.g. bagging); they can be the same algorithm repeated with re-weighted samples of the training set based on previous model performance (e.g. boosting); or they can be several different algorithms that are trained on the same data. Regardless, an ensemble model typically predicts via a majority vote. For the latter example, utilizing several algorithms with their various assumptions and biases allows algorithms to account for each other's weaknesses. If the multiple assumptions and biases of each algorithm produce a series of weak learners with poor performances, combining them can produce a more stable and accurate prediction [[10]](#references).
 
-![Ensemble classifier on simulated data. Each class is represented by a
+![](figures/Ensemble_Example_kbg.png)
+
+Figure 9. Ensemble classifier on simulated data. Each class is represented by a
 single color. The ensemble classifier is made from the previous models
-trained on the simulated data (e.g., $$K$$NN \[Figure
-[[4]](#fig:KNN_Hastie){reference-type="ref" reference="fig:KNN_Hastie"}\],
-SVM \[Figure [[5]](#fig:SVM_Hastie){reference-type="ref"
-reference="fig:SVM_Hastie"}\], LDA \[Figure
-[[6]](#fig:LDA_Hastie){reference-type="ref" reference="fig:LDA_Hastie"}\],
-QDA \[Figure [[7]](#fig:QDA_Hastie){reference-type="ref"
-reference="fig:QDA_Hastie"}\], and Logistic Regression \[Figure
-[[8]](#fig:LR_Hastie){reference-type="ref" reference="fig:LR_Hastie"}\])
-with a majority vote for prediction. Shaded regions represent class
-prediction in the area. Inspiration from Hastie et al. - *Elements of
-Statistical Learning*
-[[6]](#references).](figures/Ensemble_Example_kbg.png){#fig:Ensemble_Hastie}
+trained on the simulated data (e.g., $$K$$NN \[Figure 4\], SVM \[Figure 5\], LDA \[Figure 6]\], QDA \[Figure 7\], and Logistic Regression \[Figure 8\]) with a majority vote for prediction. Shaded regions represent class prediction in the area. Inspiration from Hastie et al. - *Elements of Statistical Learning* [[6]](#references).
 
-::: algorithm
-**Input:** $$K$$NN, SVM, LDA, QDA, Logistic Regression, $X_{test}$
-**Output:** Predictions
-:::
+````
+Algorithm 6. Ensemble 
+Input: KNN, SVM, LDA, QDA, Logistic Regression, X_test 
+Output: Predictions
+M = [KNN, SVM, LDA, QDA, Logistic Regression]
+for i,x in enumerate(X_test)
+    for j, m in enumare(M)
+        ModelPrediction[j] = model m prediction for x 
+    Predictions[i] = mode[ModelPredictions]
+````
 
 # Results
 
